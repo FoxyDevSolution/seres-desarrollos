@@ -11,7 +11,7 @@
   --background-color: #ffffff; /** Fondo general de la página */
   --default-color: #444444; /** Color base del texto */
   --heading-color: #2f4d5a; /** Títulos, encabezados */
-  --accent-color:#534b73; /** Color principal de marca: botones, enlaces, íconos destacados */
+  --accent-color: #534b73; /** Color principal de marca: botones, enlaces, íconos destacados */
   --surface-color: #ffffff; /** Fondos internos: tarjetas, bloques diferenciados del fondo principal */
   --contrast-color: #ffffff; /** Texto sobre fondos oscuros o con acento */
 }
@@ -63,7 +63,7 @@ body {
 }
 
 a {
-  color: var(--accent-color);
+  color: #a798e6 ;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -1685,11 +1685,11 @@ section,
 .portfolio-details .portfolio-info ul li+li {
   margin-top: 10px;
 }
-
+/*
 .portfolio-details .portfolio-description {
   padding-top: 30px;
 }
-
+*/
 .portfolio-details .portfolio-description h2 {
   font-size: 26px;
   font-weight: 700;
@@ -1700,6 +1700,8 @@ section,
   padding: 0;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
+
+
 
 /*--------------------------------------------------------------
 # Service Details Section
