@@ -41,32 +41,28 @@
       <nav id="navmenu" class="navmenu">
         <ul>
                                               <!--*BOTON DE INICIO NABAR-->
-          <li><a href="#hero" class="active">Inicio</a></li>
+          <li><a href="index.html#hero" class="active">Inicio</a></li>
                                              <!--*BOTON DE NOSOTROS NABAR-->
-          <li><a href="#about">Nosotros</a></li>
+          <li><a href="index.html#about">Nosotros</a></li>
                                              <!--*BOTON DE PROYECTOS NABAR-->
-          <li class="dropdown"><a href="#portfolio"><span>Proyectos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="index.html#portfolio"><span>Proyectos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
                                              <!--*BOTON DE PROYECTOS - BARILOCHE  NABAR-->
-              <li class="dropdown"><a href="#"><span>Bariloche</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <li class="dropdown"><a href="index.html?filter=filter-app#portfolio"><span>Bariloche</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                  <li><a href="lasChacrasHaus.html">SERES Las Chacras Haus</a></li>
-                  <li><a href="arelauquenHaus.html">SERES Arelauquen Haus</a></li>
-                  <li><a href="#">SERES Güemes Haus</a></li>
-                  <li><a href="#">Puerto Petunia</a></li>
+                  <li><a href="lasChacrasHaus.html">Las Chacras Haus</a></li>
+                  <li><a href="arelauquenHaus.html">Arelauquen Haus</a></li>
+                  <li><a href="guemesHaus.html">Güemes Haus</a></li>
+                  <li><a href="sanMartin.html">San Martin Suites</a></li>
+                  <li><a href="livePatagonia.html">Live Patagonia</a></li>
                 </ul>
               </li>
                                              <!--*BOTON DE PROYECTOS - BUENOS AIRES  NABAR-->
-              <li class="dropdown"><a href="#"><span>Buenos Aires</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">La Comarca de Maschwitz</a></li>
-                  <li><a href="#">Dorrego 2261</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Conoce más</a></li>
+              <li><a href="index.html?filter=filter-product#portfolio"><span>Buenos Aires</span></a></li>
+              <li><a href="index.html?filter=filter-branding#portfolio">Conoce más</a></li>
             </ul>
                                                          <!--*BOTON DE CONTACTO NABAR-->
-          <li><a href="#contact">Contacto</a></li>
+          <li><a href="index.html#contact">Contacto</a></li>
 
                                                                        <!--*BOTON DE IDIOMA NABAR-->
             <li class="dropdown"><a href="#"><span>Idioma</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -359,11 +355,11 @@
           </div>
         </div>
 
-        <!-- ? CARD PROYECTO - San Martín Haus / filtro bariloche aplicado -->
+        <!-- ? CARD PROYECTO - San Martín Suites / filtro bariloche aplicado -->
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
           <img src="assets/img/portfolio/sanMartin.jpeg" class="img-fluid" alt="Seres San Martin Suites">
           <div class="portfolio-info">
-            <h4>San Martín Haus</h4>
+            <h4>San Martín Suites</h4>
             <p>Departamentos modernos en el corazón de Bariloche</p>
             <a href="assets/img/portfolio/sanMartin.jpeg" title="Seres San Martin Suites" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
             <a href="sanMartin.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -585,6 +581,35 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const filterParam = urlParams.get('filter');
+
+  if (filterParam) {
+    window.addEventListener('load', function() {
+      const isotopeContainer = document.querySelector('.isotope-container');
+      if (isotopeContainer && typeof Isotope !== 'undefined') {
+        const iso = new Isotope(isotopeContainer, {
+          itemSelector: '.isotope-item',
+          layoutMode: 'masonry'
+        });
+        iso.arrange({ filter: '.' + filterParam });
+
+        // Marcar el filtro activo visualmente
+        document.querySelectorAll('.portfolio-filters li').forEach(li => li.classList.remove('filter-active'));
+        const filterButton = document.querySelector(`.portfolio-filters li[data-filter='.${filterParam}']`);
+        if (filterButton) filterButton.classList.add('filter-active');
+      }
+    });
+  }
+});
+</script>
+
+
+
+
 
 </body>
 
