@@ -207,3 +207,15 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+document.addEventListener("scroll", function() {
+  const whatsappBtn = document.querySelector(".whatsapp-float");
+  if (window.scrollY > window.innerHeight * 0.7) { 
+    // cuando pase el 70% de la altura del hero
+    whatsappBtn.classList.add("show");
+  } else {
+    whatsappBtn.classList.remove("show");
+  }
+});
+
