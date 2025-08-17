@@ -291,7 +291,7 @@
             <div class="text-center">
               <h3>Seguinos en Instagram</h3>
               <p>Desarrollos inmobiliarios únicos. Una inversión en el mejor destino.</p>
-              <a class="cta-btn" href="https://www.instagram.com/seresdesarrollos/" target="_blank" rel="noopener noreferrer">@seresdesarrollos</a>
+              <a class="cta-btn" href="https://www.instagram.com/seresdesarrollos_/" target="_blank" rel="noopener noreferrer">@seresdesarrollos</a>
             </div>
           </div>
         </div>
@@ -425,12 +425,6 @@
 </section><!--! /Portfolio Section FINAL -->
 
 
-
-
-
-
-
-
     <section id="faq" class="faq section light-background">
 
     <!--! Contact Section -->
@@ -477,41 +471,46 @@
             </div>
           </div>
 
-          <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
+<div class="col-lg-7">
+  <form id="contact-form" action="https://formsubmit.co/foxydevsolution@gmail.com" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+    <div class="row gy-4">
 
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Nombre</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
-                </div>
+      <div class="col-md-6">
+        <label for="name-field" class="pb-2">Nombre</label>
+        <input type="text" name="name" id="name-field" class="form-control" required>
+      </div>
 
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
-                </div>
+      <div class="col-md-6">
+        <label for="email-field" class="pb-2">Email</label>
+        <input type="email" class="form-control" name="email" id="email-field" required>
+      </div>
 
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Asunto</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
-                </div>
+      <div class="col-md-12">
+        <label for="subject-field" class="pb-2">Asunto</label>
+        <input type="text" class="form-control" name="subject" id="subject-field" required>
+      </div>
 
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Mensaje</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
+      <div class="col-md-12">
+        <label for="message-field" class="pb-2">Mensaje</label>
+        <textarea class="form-control" name="message" rows="10" id="message-field" required></textarea>
+      </div>
 
-                <div class="col-md-12 text-center">
-                  <div class="loading">Espera un segundo!</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Tu mensaje fue enviado. Muchas gracias!</div>
+      <!-- Configuración oculta -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="index.html#contact">
 
-                  <button type="submit">Escribinos por whatsapp</button>
-                </div>
+      <div class="col-md-12 text-center">
+        <div class="loading" style="display:none;">Espera un segundo!</div>
+        <div class="error-message" style="display:none; color:red;"></div>
+        <div class="sent-message" style="display:none; color:green;">Tu mensaje fue enviado. Muchas gracias!</div>
 
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
+        <button type="submit">Enviar</button>
+      </div>
+
+    </div>
+  </form>
+</div>
 
         </div>
 
@@ -538,7 +537,7 @@
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href="https://www.instagram.com/seresdesarrollos_/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
             <a href=""><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
@@ -607,6 +606,46 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault(); // Evita el envío normal
+
+  const form = e.target;
+  const loading = form.querySelector(".loading");
+  const sentMessage = form.querySelector(".sent-message");
+  const errorMessage = form.querySelector(".error-message");
+
+  // Mostrar mensaje de carga
+  loading.style.display = "block";
+  sentMessage.style.display = "none";
+  errorMessage.style.display = "none";
+
+  fetch(form.action, {
+    method: form.method,
+    body: new FormData(form),
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    loading.style.display = "none";
+    if (response.ok) {
+      sentMessage.style.display = "block";
+      form.reset();
+      setTimeout(() => {
+        sentMessage.style.display = "none";
+      }, 5000); // Oculta el mensaje después de 5 seg
+    } else {
+      throw new Error("Error al enviar el formulario");
+    }
+  }).catch(error => {
+    loading.style.display = "none";
+    errorMessage.textContent = "Ocurrió un error. Intenta nuevamente.";
+    errorMessage.style.display = "block";
+  });
+});
+</script>
 
 
 
