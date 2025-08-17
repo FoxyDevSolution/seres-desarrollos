@@ -31,59 +31,74 @@
   <!--! Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+   <!--!Script de Traducción-->
+  <script src="https://unpkg.com/i18next@21.6.16/i18next.min.js"></script>
+
 </head>
 
 <body class="index-page">
-                                              <!--! Section del navbar-->
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+<!--! Section del navbar-->
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="Seres">
-      </a>
+    <a href="index.html" class="logo d-flex align-items-center">
+      <img src="assets/img/logo.png" alt="Seres">
+    </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-                                              <!--*BOTON DE INICIO NABAR-->
-          <li><a href="index.html#hero" class="active">Inicio</a></li>
-                                             <!--*BOTON DE NOSOTROS NABAR-->
-          <li><a href="index.html#about">Nosotros</a></li>
-                                             <!--*BOTON DE PROYECTOS NABAR-->
-          <li class="dropdown"><a href="index.html#portfolio"><span>Proyectos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-                                             <!--*BOTON DE PROYECTOS - BARILOCHE  NABAR-->
-              <li class="dropdown"><a href="index.html?filter=filter-app#portfolio"><span>Bariloche</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="lasChacrasHaus.html">Las Chacras Haus</a></li>
-                  <li><a href="arelauquenHaus.html">Arelauquen Haus</a></li>
-                  <li><a href="guemesHaus.html">Güemes Haus</a></li>
-                  <li><a href="sanMartin.html">San Martin Suites</a></li>
-                  <li><a href="livePatagonia.html">Live Patagonia</a></li>
-                </ul>
-              </li>
-                                             <!--*BOTON DE PROYECTOS - BUENOS AIRES  NABAR-->
-              <li><a href="index.html?filter=filter-product#portfolio"><span>Buenos Aires</span></a></li>
-              <li><a href="index.html?filter=filter-branding#portfolio">Conoce más</a></li>
-            </ul>
-                                                         <!--*BOTON DE CONTACTO NABAR-->
-          <li><a href="index.html#contact">Contacto</a></li>
-
-                                                                       <!--*BOTON DE IDIOMA NABAR-->
-            <li class="dropdown"><a href="#"><span>Idioma</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <!--*BOTON DE INICIO NABAR-->
+        <li><a href="index.html#hero" class="active"><span data-i18n="navbarInicio">Inicio</span></a></li>
+        <!--*BOTON DE NOSOTROS NABAR-->
+        <li><a href="index.html#about"><span data-i18n="navbarNosotros">Nosotros</span></a></li>
+        <!--*BOTON DE PROYECTOS NABAR-->
+        <li class="dropdown">
+          <a href="index.html#portfolio">
+            <span data-i18n="navbarproyectos">Proyectos</span> 
+            <i class="bi bi-chevron-down toggle-dropdown"></i>
+          </a>
+          <ul>
+            <!--*BOTON DE PROYECTOS - BARILOCHE NABAR-->
+            <li class="dropdown">
+              <a href="index.html?filter=filter-app#portfolio">
+                <span>Bariloche</span> 
+                <i class="bi bi-chevron-down toggle-dropdown"></i>
+              </a>
               <ul>
-
-                  <li><a href="#" onclick="setLanguage('es')">Español</a></li>
-                  <li><a href="#" onclick="setLanguage('en')">English</a></li>
-                  <li><a href="#" onclick="setLanguage('pt')">Português</a></li>
+                <li><a href="lasChacrasHaus.html">Las Chacras Haus</a></li>
+                <li><a href="arelauquenHaus.html">Arelauquen Haus</a></li>
+                <li><a href="guemesHaus.html">Güemes Haus</a></li>
+                <li><a href="sanMartin.html">San Martin Suites</a></li>
+                <li><a href="livePatagonia.html">Live Patagonia</a></li>
               </ul>
-          </li>  
-          </li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+            </li>
+            <!--*BOTON DE PROYECTOS - BUENOS AIRES NABAR-->
+            <li><a href="index.html?filter=filter-product#portfolio"><span>Buenos Aires</span></a></li>
+            <li><a href="index.html?filter=filter-branding#portfolio"><span data-i18n="navbarConoceMas">Conoce más</span></a></li>
+          </ul>
+        </li>
+        <!--*BOTON DE CONTACTO NABAR-->
+        <li><a href="index.html#contact"><span data-i18n="navbarcontacto">Contacto</span></a></li>
 
-    </div> <!-- ! NAVBAR Section FINAL -->
-  </header>
+        <!--*BOTON DE IDIOMA NABAR-->
+        <li class="dropdown">
+          <a href="#">
+            <span data-i18n="navbarIdioma">Idioma</span> 
+            <i class="bi bi-chevron-down toggle-dropdown"></i>
+          </a>
+          <ul>
+            <li><a href="#" onclick="setLanguage('es'); return false;">Español</a></li>
+            <li><a href="#" onclick="setLanguage('en'); return false;">English</a></li>
+            <li><a href="#" onclick="setLanguage('pt'); return false;">Português</a></li>
+          </ul>
+        </li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+  </div> <!-- ! NAVBAR Section FINAL -->
+</header>
+
 
   <main class="main">
 
@@ -111,197 +126,109 @@
 
     </section><!-- ! Hero Section FINAL-->
 
-    <!--! About Section -->
-    <section id="about" class="about section">
-
-      <div class="container">
-
-        <div class="row gy-5">
-                                                       <!--*SECTION PRESENTACIÓN-->
-          <div class="content col-xl-5 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
-            <h3>Emprendimientos inmobiliarios</h3>
-            <h4>Inversión y calidad de vida.</h4>
-            <p>
-              En Seres Desarrollos transformamos ideas en hogares únicos, combinando diseño moderno, tecnología y naturaleza. Creamos espacios que mejoran la vida de las personas y ofrecen oportunidades de inversión sólidas, con foco en cada detalle.
-            </p>
-                         <!--?BOTON DE PROYECTOS-->
-            <a href="#portfolio" class="about-btn align-self-center align-self-xl-start"><span>Proyectos</span> <i class="bi bi-chevron-right"></i></a>
-          </div>
-                                                       <!--*SECTION DIFERENCIALES MARCA-->
-          <div class="col-xl-7" data-aos="fade-up" data-aos-delay="200">
-            <div class="row gy-4">
-                                         <!--?DIF 1: EXP QUE INSPIRAN-->
-              <div class="col-md-6 icon-box position-relative">
-                <span> 
-                  <img loading="lazy" decoding="async" width="70" height="70" src="https://seresdesarrollos.com/wp-content/uploads/2021/03/vision2.svg" class="attachment-large size-large wp-image-311" alt="Icono faro">
-                </span>
-                <h4>Experiencias que inspiran</h4>
-                <p>Proyectos centrados en el bienestar físico, emocional y cotidiano.</p>
-              </div>
-                                         <!--?DIF 2: UBIC. PRIV.-->
-              <div class="col-md-6 icon-box position-relative">
-              <span>
-                <img loading="lazy" decoding="async" width="70" height="70" src="https://seresdesarrollos.com/wp-content/uploads/2021/03/terrenos4_ok.svg" class="attachment-large size-large wp-image-814" alt="Icono Parcela">
-              </span>
-                <h4>Ubicaciones privilegiadas</h4>
-                <p>Elegimos entornos únicos con gran proyección de valor.</p>
-              </div>
-
-                                         <!--?DIF 3: DISEÑO-->
-              <div class="col-md-6 icon-box position-relative">
-              <span>
-                <img loading="lazy" decoding="async" width="70" height="70" src="https://seresdesarrollos.com/wp-content/uploads/2021/03/arq2.svg" class="attachment-large size-large wp-image-307" alt="Icono diseño">
-              </span>
-                <h4>Diseño con propósito</h4>
-                <p>Fusionamos creatividad, estilo y funcionalidad en cada espacio.</p>
-              </div>
-                                         <!--?DIF 4:CONFORT-->
-              <div class="col-md-6 icon-box position-relative">
-              <span>
-                <img loading="lazy" decoding="async" width="70" height="70" src="https://seresdesarrollos.com/wp-content/uploads/2021/03/wellness2.svg" class="attachment-large size-large wp-image-312" alt="Icono Corazón">
-              </span>
-                <h4>Confort pensado para vos</h4>
-                <p>Ambientes equilibrados para una vida activa, plena y en calma.</p>
-              </div>
-                                         <!--?DIF 5: TECNOLOGIA-->
-              <div class="col-md-6 icon-box position-relative">
-              <span>
-                <img loading="lazy" decoding="async" width="70" height="70" src="https://seresdesarrollos.com/wp-content/uploads/2021/03/tech2.svg" class="attachment-large size-large wp-image-309" alt="Icono Sustentable">
-              </span>
-                <h4>Tecnología sustentable</h4>
-                <p>Infraestructura eficiente que mejora la calidad de vida y cuida el entorno.</p>
-              </div>
-                                         <!--?DIF 6: ARQUITECTURA-->
-              <div class="col-md-6 icon-box position-relative">
-              <span>
-                <img loading="lazy" decoding="async" width="70" height="70" src="https://seresdesarrollos.com/wp-content/uploads/2021/03/nature2.svg" class="attachment-large size-large wp-image-308" alt="Icono naturaleza">
-              </span>
-                <h4>Arquitectura en armonía</h4>
-                <p>Diseños que respetan y realzan la belleza natural del entorno.</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
+                                                           <!--! About Section -->
+<section id="about" class="about section">
+  <div class="container">
+    <div class="row gy-5">
+      <!--*SECTION PRESENTACIÓN-->
+      <div class="content col-xl-5 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
+        <h3 data-i18n="PresTitulo">Emprendimientos inmobiliarios</h3>
+        <h4 data-i18n="PresSubtitulo">Inversión y calidad de vida.</h4>
+        <p data-i18n="PresP">
+          En Seres Desarrollos transformamos ideas en hogares únicos, combinando diseño moderno, tecnología y naturaleza. Creamos espacios que mejoran la vida de las personas y ofrecen oportunidades de inversión sólidas, con foco en cada detalle.
+        </p>
+        <!--? BOTON DE PROYECTOS -->
+        <a href="#portfolio" class="about-btn align-self-center align-self-xl-start">
+          <span data-i18n="proyecto">Proyectos</span> 
+          <i class="bi bi-chevron-right"></i>
+        </a>
       </div>
 
-    </section><!--! /About Section FINAL -->
-
-    <!--! Services Section - ESTA SECTION NO LA VOY A USAR.->
-    <section id="services" class="services section">
-
-      <!-- Section Title 
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title 
-
-      <div class="container">
-
+      <!--*SECTION DIFERENCIALES MARCA-->
+      <div class="col-xl-7" data-aos="fade-up" data-aos-delay="200">
         <div class="row gy-4">
 
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-activity icon"></i></div>
-              <h4><a href="service-details.html" class="stretched-link">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div><!-- End Service Item 
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-              <h4><a href="service-details.html" class="stretched-link">Sed ut perspici</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div><!-- End Service Item 
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
-              <h4><a href="service-details.html" class="stretched-link">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div><!-- End Service Item -
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-broadcast icon"></i></div>
-              <h4><a href="service-details.html" class="stretched-link">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div><!-- End Service Item --
-
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
-    <!-- Stats Section -
-    <section id="stats" class="stats section light-background">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Happy Clients</strong> <span>consequuntur quae</span></p>
-            </div>
-          </div><!-- End Stats Item --
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Projects</strong> <span>adipisci atque cum quia aut</span></p>
-            </div>
-          </div><!-- End Stats Item --
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hours Of Support</strong> <span>aut commodi quaerat</span></p>
-            </div>
-          </div><!-- End Stats Item --
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hard Workers</strong> <span>rerum asperiores dolor</span></p>
-            </div>
-          </div><!-- End Stats Item --
-
-        </div>
-
-      </div>
-
-    </section><!-- /Stats Section -->
-
-    <!--! INSTAGRAM SECTION -->
-    <section id="call-to-action" class="call-to-action section accent-background">
-                                                       <!--*BG SECTION INSTAGRAM -->
-      <img src="assets/img/cta-bg.jpg" alt="Foto del lago de Bariloche">
-                                                       <!--*BOTON INSTAGRAM -->
-      <div class="container">
-        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-xl-10">
-            <div class="text-center">
-              <h3>Seguinos en Instagram</h3>
-              <p>Desarrollos inmobiliarios únicos. Una inversión en el mejor destino.</p>
-              <a class="cta-btn" href="https://www.instagram.com/seresdesarrollos_/" target="_blank" rel="noopener noreferrer">@seresdesarrollos</a>
-            </div>
+          <!--? DIF 1: EXPERIENCIAS -->
+          <div class="col-md-6 icon-box position-relative">
+            <span>
+              <img loading="lazy" decoding="async" width="70" height="70" src="https://seresdesarrollos.com/wp-content/uploads/2021/03/vision2.svg" alt="Icono faro">
+            </span>
+            <h4 data-i18n="subtituloExperiencias">Experiencias que inspiran</h4>
+            <p data-i18n="parrafoExperiencias">Proyectos centrados en el bienestar físico, emocional y cotidiano.</p>
           </div>
+
+          <!--? DIF 2: UBICACIONES -->
+          <div class="col-md-6 icon-box position-relative">
+            <span>
+              <img loading="lazy" decoding="async" width="70" height="70" src="https://seresdesarrollos.com/wp-content/uploads/2021/03/terrenos4_ok.svg" alt="Icono Parcela">
+            </span>
+            <h4 data-i18n="subtituloUbicaciones">Ubicaciones privilegiadas</h4>
+            <p data-i18n="parrafoUbicaciones">Elegimos entornos únicos con gran proyección de valor.</p>
+          </div>
+
+          <!--? DIF 3: DISEÑO -->
+          <div class="col-md-6 icon-box position-relative">
+            <span>
+              <img loading="lazy" decoding="async" width="70" height="70" src="https://seresdesarrollos.com/wp-content/uploads/2021/03/arq2.svg" alt="Icono diseño">
+            </span>
+            <h4 data-i18n="subtituloDiseño">Diseño con propósito</h4>
+            <p data-i18n="parrafoDiseño">Fusionamos creatividad, estilo y funcionalidad en cada espacio.</p>
+          </div>
+
+          <!--? DIF 4: CONFORT -->
+          <div class="col-md-6 icon-box position-relative">
+            <span>
+              <img loading="lazy" decoding="async" width="70" height="70" src="https://seresdesarrollos.com/wp-content/uploads/2021/03/wellness2.svg" alt="Icono Corazón">
+            </span>
+            <h4 data-i18n="subtituloConfort">Confort pensado para vos</h4>
+            <p data-i18n="parrafoConfort">Ambientes equilibrados para una vida activa, plena y en calma.</p>
+          </div>
+
+          <!--? DIF 5: TECNOLOGÍA -->
+          <div class="col-md-6 icon-box position-relative">
+            <span>
+              <img loading="lazy" decoding="async" width="70" height="70" src="https://seresdesarrollos.com/wp-content/uploads/2021/03/tech2.svg" alt="Icono Sustentable">
+            </span>
+            <h4 data-i18n="subtituloTecnologia">Tecnología sustentable</h4>
+            <p data-i18n="parrafoTecnologia">Infraestructura eficiente que mejora la calidad de vida y cuida el entorno.</p>
+          </div>
+
+          <!--? DIF 6: ARQUITECTURA -->
+          <div class="col-md-6 icon-box position-relative">
+            <span>
+              <img loading="lazy" decoding="async" width="70" height="70" src="https://seresdesarrollos.com/wp-content/uploads/2021/03/nature2.svg" alt="Icono naturaleza">
+            </span>
+            <h4 data-i18n="subtituloArquitectura">Arquitectura en armonía</h4>
+            <p data-i18n="parrafoArquitectura">Diseños que respetan y realzan la belleza natural del entorno.</p>
+          </div>
+
         </div>
       </div>
+    </div>
+  </div>
+</section><!--! About Section FINAL -->
 
-    </section><!--! /INSTRAGRAM SECTION FINAL -->
+
+<!--! INSTAGRAM SECTION -->
+<section id="call-to-action" class="call-to-action section accent-background">
+  <!--*BG SECTION INSTAGRAM -->
+  <img src="assets/img/cta-bg.jpg" alt="Foto del lago de Bariloche">
+
+  <!--*BOTON INSTAGRAM -->
+  <div class="container">
+    <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+      <div class="col-xl-10">
+        <div class="text-center">
+          <h3 data-i18n="instaTitulo">Seguinos en Instagram</h3>
+          <p data-i18n="instaTexto">Desarrollos inmobiliarios únicos. Una inversión en el mejor destino.</p>
+          <a class="cta-btn" href="https://www.instagram.com/seresdesarrollos_/" target="_blank" rel="noopener noreferrer" data-i18n="instaBoton">@seresdesarrollos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--! /INSTAGRAM SECTION FINAL -->
+
 
 <!--! Portfolio Section -->
 <section id="portfolio" class="portfolio section">
@@ -654,6 +581,158 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     errorMessage.style.display = "block";
   });
 });
+</script>
+
+<script>
+const resources = {
+  es: {
+    translation: {
+      // NAVBAR
+      navbarInicio: "Inicio",
+      navbarNosotros: "Nosotros",
+      navbarproyectos: "Proyectos",
+      navbarConoceMas: "Conoce más",
+      navbarcontacto: "Contacto",
+      navbarIdioma: "Idioma",
+
+      // ABOUT - Presentación
+      PresTitulo: "Emprendimientos inmobiliarios",
+      PresSubtitulo: "Inversión y calidad de vida.",
+      PresP: "En Seres Desarrollos transformamos ideas en hogares únicos, combinando diseño moderno, tecnología y naturaleza. Creamos espacios que mejoran la vida de las personas y ofrecen oportunidades de inversión sólidas, con foco en cada detalle.",
+      proyecto: "Proyectos",
+
+      // ABOUT - Diferenciales
+      subtituloExperiencias: "Experiencias que inspiran",
+      parrafoExperiencias: "Proyectos centrados en el bienestar físico, emocional y cotidiano.",
+
+      subtituloUbicaciones: "Ubicaciones privilegiadas",
+      parrafoUbicaciones: "Elegimos entornos únicos con gran proyección de valor.",
+
+      subtituloDiseño: "Diseño con propósito",
+      parrafoDiseño: "Fusionamos creatividad, estilo y funcionalidad en cada espacio.",
+
+      subtituloConfort: "Confort pensado para vos",
+      parrafoConfort: "Ambientes equilibrados para una vida activa, plena y en calma.",
+
+      subtituloTecnologia: "Tecnología sustentable",
+      parrafoTecnologia: "Infraestructura eficiente que mejora la calidad de vida y cuida el entorno.",
+
+      subtituloArquitectura: "Arquitectura en armonía",
+      parrafoArquitectura: "Diseños que respetan y realzan la belleza natural del entorno.",
+
+            // INSTAGRAM SECTION ESPAÑOL
+      instaTitulo: "Seguinos en Instagram",
+      instaTexto: "Desarrollos inmobiliarios únicos. Una inversión en el mejor destino.",
+      instaBoton: "@seresdesarrollos"
+    }
+  },
+  en: {
+    translation: {
+      // NAVBAR
+      navbarInicio: "Home",
+      navbarNosotros: "About Us",
+      navbarproyectos: "Projects",
+      navbarConoceMas: "Learn more",
+      navbarcontacto: "Contact",
+      navbarIdioma: "Language",
+
+      // ABOUT - Presentation
+      PresTitulo: "Real Estate Developments",
+      PresSubtitulo: "Investment and Quality of Life.",
+      PresP: "At Seres Desarrollos we turn ideas into unique homes, combining modern design, technology, and nature. We create spaces that enhance people's lives and provide solid investment opportunities, focusing on every detail.",
+      proyecto: "Projects",
+
+      // ABOUT - Differentials
+      subtituloExperiencias: "Experiences that inspire",
+      parrafoExperiencias: "Projects focused on physical, emotional, and daily well-being.",
+
+      subtituloUbicaciones: "Privileged locations",
+      parrafoUbicaciones: "We choose unique environments with strong value projection.",
+
+      subtituloDiseño: "Design with purpose",
+      parrafoDiseño: "We combine creativity, style, and functionality in every space.",
+
+      subtituloConfort: "Comfort designed for you",
+      parrafoConfort: "Balanced environments for an active, full, and calm life.",
+
+      subtituloTecnologia: "Sustainable technology",
+      parrafoTecnologia: "Efficient infrastructure that improves quality of life and protects the environment.",
+
+      subtituloArquitectura: "Architecture in harmony",
+      parrafoArquitectura: "Designs that respect and enhance the natural beauty of the environment.",
+
+      // INSTAGRAM SECTION - ENGLISH
+      instaTitulo: "Follow us on Instagram",
+      instaTexto: "Unique real estate developments. An investment in the best destination.",
+      instaBoton: "@seresdesarrollos"
+    }
+  },
+  pt: {
+    translation: {
+      // NAVBAR
+      navbarInicio: "Início",
+      navbarNosotros: "Sobre nós",
+      navbarproyectos: "Projetos",
+      navbarConoceMas: "Saiba mais",
+      navbarcontacto: "Contato",
+      navbarIdioma: "Idioma",
+
+      // ABOUT - Apresentação
+      PresTitulo: "Empreendimentos imobiliários",
+      PresSubtitulo: "Investimento e qualidade de vida.",
+      PresP: "Na Seres Desarrollos transformamos ideias em lares únicos, combinando design moderno, tecnologia e natureza. Criamos espaços que melhoram a vida das pessoas e oferecem oportunidades sólidas de investimento, com foco em cada detalhe.",
+      proyecto: "Projetos",
+
+      // ABOUT - Diferenciais
+      subtituloExperiencias: "Experiências que inspiram",
+      parrafoExperiencias: "Projetos focados no bem-estar físico, emocional e cotidiano.",
+
+      subtituloUbicaciones: "Localizações privilegiadas",
+      parrafoUbicaciones: "Escolhemos ambientes únicos com grande projeção de valor.",
+
+      subtituloDiseño: "Design com propósito",
+      parrafoDiseño: "Unimos criatividade, estilo e funcionalidade em cada espaço.",
+
+      subtituloConfort: "Conforto pensado para você",
+      parrafoConfort: "Ambientes equilibrados para uma vida ativa, plena e tranquila.",
+
+      subtituloTecnologia: "Tecnologia sustentável",
+      parrafoTecnologia: "Infraestrutura eficiente que melhora a qualidade de vida e preserva o meio ambiente.",
+
+      subtituloArquitectura: "Arquitetura em harmonia",
+      parrafoArquitectura: "Projetos que respeitam e valorizam a beleza natural do entorno.",
+
+      // INSTAGRAM SECTION - PORTUGUÊS
+      instaTitulo: "Siga-nos no Instagram",
+      instaTexto: "Empreendimentos imobiliários únicos. Um investimento no melhor destino.",
+      instaBoton: "@seresdesarrollos"
+    }
+  }
+};
+
+
+  // Inicializa i18next
+  i18next.init({
+    lng: localStorage.getItem("lang") || "es", // idioma guardado o español por defecto
+    debug: false,
+    resources
+  }, function(err, t) {
+    updateContent(); // aplicar traducciones al cargar
+  });
+
+  function updateContent() {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      el.textContent = i18next.t(key);
+    });
+  }
+
+  function setLanguage(lang) {
+    i18next.changeLanguage(lang, () => {
+      updateContent();
+      localStorage.setItem("lang", lang);
+    });
+  }
 </script>
 
 
