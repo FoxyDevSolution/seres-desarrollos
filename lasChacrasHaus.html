@@ -4,9 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Las Chacras - Seres Desarrollos</title>
-  <meta name="description" content="Lotes exclusivos en San Martín de los Andes con vistas panorámicas. Naturaleza, diseño moderno y una inversión inteligente.">
-  <meta name="keywords" content="Las Chacras, Seres Desarrollos, San Martín de los Andes, lotes en venta, Patagonia, inversión inmobiliaria, naturaleza, arquitectura moderna, desarrollo urbanístico, real estate Argentina">
+
+  <title id="headTitle">Las Chacras - Seres Desarrollos</title>
+  <meta id="headDesc" name="description" content="Lotes exclusivos en San Martín de los Andes con vistas panorámicas. Naturaleza, diseño moderno y una inversión inteligente.">
+  <meta id="headKeywords" name="keywords" content="Las Chacras, Seres Desarrollos, San Martín de los Andes, lotes en venta, Patagonia, inversión inmobiliaria, naturaleza, arquitectura moderna, desarrollo urbanístico, real estate Argentina">
 
   <!--! Favicons -->
   <link href="assets/img/isologo.png" rel="icon">
@@ -15,7 +16,7 @@
   <!--! Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
   <!--! Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +28,9 @@
   <!--! Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <script src="https://unpkg.com/i18next@22.5.1/dist/umd/i18next.min.js"></script>
 </head>
+
 
 <body class="portfolio-details-page">
 
@@ -103,12 +106,12 @@
 <!--*TITULO DEL PROYECTO -->
 <div class="page-title accent-background">
   <div class="container position-relative">
-    <h1>Las Chacras Haus – Bariloche</h1>
-    <p>Un desarrollo exclusivo con vistas privilegiadas, inmerso en la naturaleza patagónica. Una oportunidad única de inversión y calidad de vida.</p>
+    <h1 data-i18n="tituloProyecto">Las Chacras Haus – Bariloche</h1>
+    <p data-i18n="subtituloProyecto">Un desarrollo exclusivo con vistas privilegiadas, inmerso en la naturaleza patagónica. Una oportunidad única de inversión y calidad de vida.</p>
     <nav class="breadcrumbs">
       <ol>
-        <li><a href="index.html">Inicio</a></li>
-        <li class="current">Las Chacras Haus</li>
+        <li><a href="index.html" data-i18n="navbarInicio">Inicio</a></li>
+        <li class="current" data-i18n="tituloProyecto">Las Chacras Haus</li>
       </ol>
     </nav>
   </div>
@@ -160,87 +163,118 @@
         </div>
       </div>
 
-      <!-- Columna info del proyecto -->
-      <div class="col-lg-4">
-        <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-          <h3>Sobre el proyecto</h3>
-          <ul>
-            <li><strong>ARQUITECTO</strong>: Enrique Erpen</li>
-            <li><strong>EMPRESA CONSTRUCTORA</strong>: A confirmar</li>
-            <li><strong>AÑO DE MUDANZA</strong>: 2025</li>
-            <li><strong>CANTIDAD DE VIVIENDAS</strong>: 21</li>
-          </ul>
-        </div>
+    <div class="col-lg-4">
+      <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+        <h3 data-i18n="sobreProyecto">Sobre el proyecto</h3>
+        <ul>
+          <li><strong data-i18n="arquitecto">ARQUITECTO</strong>: <span data-i18n="arquitectoNombre">Enrique Erpen</span></li>
+          <li><strong data-i18n="constructora">EMPRESA CONSTRUCTORA</strong>: <span data-i18n="constructoraNombre">A confirmar</span></li>
+          <li><strong data-i18n="anioMudanza">AÑO DE MUDANZA</strong>: <span data-i18n="anioMudanzaValor">2025</span></li>
+          <li><strong data-i18n="cantViviendas">CANTIDAD DE VIVIENDAS</strong>: <span data-i18n="cantViviendasValor">21</span></li>
+        </ul>
       </div>
-
-    </div><!-- /PRIMERA FILA -->
+    </div>
 
 
     <!--? SEGUNDA FILA: Estado + Descripción -->
     <div class="row gy-4">
 
-      <!-- Columna estado del proyecto -->
-      <div class="col-lg-4">
-        <div class="portfolio-info" data-aos="fade-up" data-aos-delay="250">
-          <h3>Estado del proyecto</h3>
-          <p class="mb-1">Avance general del desarrollo</p>
-          <div class="progress mb-4">
-            <div class="progress-bar bg-success" style="width: 40%;">40%</div>
-          </div>
-
-          <p class="mb-1">Fase 1 (estructura y obra gris)</p>
-          <div class="progress mb-4">
-            <div class="progress-bar bg-success" style="width: 90%;">90%</div>
-          </div>
-          <p class="mb-1">Losa sobre primer piso completa.</p>
-          <p class="mb-1">Finalizada la estructura en elevación sobre el frente norte.</p>
-          <p class="mb-1">En ejecución: elevación de unidades 8, 9 y 10.</p>
-        </div>
-
+<!-- Columna estado del proyecto -->
+<div class="col-lg-4">
+  <div class="portfolio-info" data-aos="fade-up" data-aos-delay="250">
+    <h3 data-i18n="estadoProyecto">Estado del proyecto</h3>
+    <p class="mb-1" data-i18n="avanceGeneral">Avance general del desarrollo</p>
+    
+    <div class="progress mb-4">
+      <div class="progress-bar bg-success" style="width: 40%;">
+        <span data-i18n="porcentajeGeneral">40%</span>
       </div>
-
-      <!-- Columna descripción -->
-      <div class="col-lg-8">
-        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-          <h2>Seres Las Chacras Haus</h2>
-          <p>En un entorno de ensueño donde la arquitectura se fusiona con la naturaleza, Las Chacras Haus redefine la experiencia de vivir frente al lago Nahuel Huapi.</p>
-          <p>Cada hogar está diseñado con materiales nobles y criterios sustentables, ofreciendo confort, armonía y conexión con el paisaje patagónico.</p>
-          <p>Ubicado a solo 15 minutos del centro de Bariloche, el complejo cuenta con más de 11.000 m², 80 metros de playa privada y vertientes naturales que recorren el predio.</p>
-          <p>Un verdadero refugio moderno, ideal para quienes buscan calidad de vida, inversión y paisaje en partes iguales.</p>
-        </div>
-      </div>
-
-    </div><!-- /SEGUNDA FILA -->
-
-    <!--* MÁS DETALLES + MAPA -->
-<div class="portfolio-details">
-<div class="row gy-4 mt-2">
-
-  <!-- Columna de detalles -->
-  <div class="col-lg-6 portfolio-description" data-aos="fade-up" data-aos-delay="300">
-    <h2>Diseñado para la sustentabilidad</h2>
-    <p>El equilibrio con la naturaleza es condición para una vida plena.</p>
-    <p>Contemplamos el uso de materiales de bajo impacto ambiental y de excelente prestación para la aislación térmica y acústica.</p>
-    <p>Implementaremos sistemas de eficiencia energética, como termotanques solares, paneles fotovoltaicos e iluminación con sensores fotovoltaicos.</p>
-    <p>El agua potable se obtendrá de pozo y se tratará con biodigestores y planta potabilizadora. El gas resultante se utilizará en el SUM y pileta climatizada.</p>
-    <p>Las Chacras Haus es un desarrollo inmobiliario. Pero antes, es un concepto. Una forma de entender la vida en armonía con la naturaleza, con los demás y con uno mismo.</p>
-
-    <h2 class="mt-4">Espacios comunes</h2>
-    <p>Contará con spa, pileta climatizada y SUM, con espacios ideales para meditación y yoga.</p>
-    <p>El predio estará totalmente parquizado y contará con un muelle propio para embarcaciones o simplemente contemplar el entorno natural del Nahuel Huapi.</p>
-  </div>
-
-  <!-- Columna del mapa -->
-  <div class="col-lg-6">
-    <div class="map-responsive">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.730871407688!2d-71.21771462423928!3d-41.101748871309705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9610cfc65996ff71%3A0x50ed22a1904f1ec7!2sDina%20Huapi%2C%20R%C3%ADo%20Negro!5e0!3m2!1ses!2sar!4v1685148924371!5m2!1ses!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-  </div>
 
-</div>
+    <p class="mb-1" data-i18n="fase1Titulo">Fase 1 (estructura y obra gris)</p>
+    <div class="progress mb-4">
+      <div class="progress-bar bg-success" style="width: 90%;">
+        <span data-i18n="fase1Porcentaje">90%</span>
+      </div>
+    </div>
+
+    <p class="mb-1" data-i18n="estadoLinea1">Losa sobre primer piso completa.</p>
+    <p class="mb-1" data-i18n="estadoLinea2">Finalizada la estructura en elevación sobre el frente norte.</p>
+    <p class="mb-1" data-i18n="estadoLinea3">En ejecución: elevación de unidades 8, 9 y 10.</p>
+  </div>
 </div>
 
+
+<!-- Columna descripción -->
+<div class="col-lg-8">
+  <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+    <h2 data-i18n="descripcionTitulo">Seres Las Chacras Haus</h2>
+    <p data-i18n="descripcionParrafo1">
+      En un entorno de ensueño donde la arquitectura se fusiona con la naturaleza, Las Chacras Haus redefine la experiencia de vivir frente al lago Nahuel Huapi.
+    </p>
+    <p data-i18n="descripcionParrafo2">
+      Cada hogar está diseñado con materiales nobles y criterios sustentables, ofreciendo confort, armonía y conexión con el paisaje patagónico.
+    </p>
+    <p data-i18n="descripcionParrafo3">
+      Ubicado a solo 15 minutos del centro de Bariloche, el complejo cuenta con más de 11.000 m², 80 metros de playa privada y vertientes naturales que recorren el predio.
+    </p>
+    <p data-i18n="descripcionParrafo4">
+      Un verdadero refugio moderno, ideal para quienes buscan calidad de vida, inversión y paisaje en partes iguales.
+    </p>
   </div>
+</div>
+
+
+<!--* MÁS DETALLES + MAPA -->
+<div class="portfolio-details">
+  <div class="row gy-4 mt-2">
+
+    <!-- Columna de detalles -->
+    <div class="col-lg-6 portfolio-description" data-aos="fade-up" data-aos-delay="300">
+      <h2 data-i18n="detallesTitulo">Diseñado para la sustentabilidad</h2>
+      <p data-i18n="detallesParrafo1">El equilibrio con la naturaleza es condición para una vida plena.</p>
+      <p data-i18n="detallesParrafo2">Contemplamos el uso de materiales de bajo impacto ambiental y de excelente prestación para la aislación térmica y acústica.</p>
+      <p data-i18n="detallesParrafo3">Implementaremos sistemas de eficiencia energética, como termotanques solares, paneles fotovoltaicos e iluminación con sensores fotovoltaicos.</p>
+      <p data-i18n="detallesParrafo4">El agua potable se obtendrá de pozo y se tratará con biodigestores y planta potabilizadora. El gas resultante se utilizará en el SUM y pileta climatizada.</p>
+      <p data-i18n="detallesParrafo5">Las Chacras Haus es un desarrollo inmobiliario. Pero antes, es un concepto. Una forma de entender la vida en armonía con la naturaleza, con los demás y con uno mismo.</p>
+
+      <h2 class="mt-4" data-i18n="comunesTitulo">Espacios comunes</h2>
+      <p data-i18n="comunesParrafo1">Contará con spa, pileta climatizada y SUM, con espacios ideales para meditación y yoga.</p>
+      <p data-i18n="comunesParrafo2">El predio estará totalmente parquizado y contará con un muelle propio para embarcaciones o simplemente contemplar el entorno natural del Nahuel Huapi.</p>
+    </div>
+
+    <!-- Columna del mapa -->
+    <div class="col-lg-6">
+      <div class="map-responsive">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.730871407688!2d-71.21771462423928!3d-41.101748871309705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9610cfc65996ff71%3A0x50ed22a1904f1ec7!2sDina%20Huapi%2C%20R%C3%ADo%20Negro!5e0!3m2!1ses!2sar!4v1685148924371!5m2!1ses!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <!--* VIDEO DE AVANCE DE OBRA -->
+<!--* SECCIÓN VIDEO DE LA OBRA -->
+<section id="video-obra" class="section">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2 data-i18n="videoTitulo">Avance de Obra</h2>
+      <p data-i18n="videoDescripcion">
+        Compartimos un resumen en video del progreso de la construcción para que sigas de cerca cada etapa del proyecto.
+      </p>
+    </div>
+
+    <div class="video-container text-center">
+      <video controls width="80%" poster="assets/img/portfolio/seresLogo.webp">
+        <source src="assets/img/portfolio/dronArelauquenSComp.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+      </video>
+    </div>
+
+  </div>
+</section>
+
 
 </section><!--* End Portfolio Details Section -->
 
@@ -262,7 +296,7 @@
           <p>Paraguay 4747</p>
           <p data-i18n="footerCiudad">Ciudad de Buenos Aires, Argentina.</p>
           <p class="mt-3"><strong data-i18n="footerTelefono">Teléfono:</strong> <span>+54 9 11 5694-4918</span></p>
-          <p><strong data-i18n="footerEmail">Email:</strong> <span>info@seresdesarrollos.com</span></p>
+          <p><strong data-i18n="footerEmail">Email:</strong> <span>seres.desarrollosbrc@gmail.com</span></p>
         </div>
         <div class="social-links d-flex mt-4">
           <a href="https://www.instagram.com/seresdesarrollos_/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
@@ -317,6 +351,226 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+<script>
+const resources = {
+  es: {
+    translation: {
+    headTitle: "Las Chacras - Seres Desarrollos",
+    headDesc: "Lotes exclusivos en San Martín de los Andes con vistas panorámicas. Naturaleza, diseño moderno y una inversión inteligente.",
+    headKeywords: "Las Chacras, Seres Desarrollos, San Martín de los Andes, lotes en venta, Patagonia, inversión inmobiliaria, naturaleza, arquitectura moderna, desarrollo urbanístico, real estate Argentina",
+
+    // --- NAVBAR ---
+    navbarInicio: "Inicio",
+    navbarNosotros: "Nosotros",
+    navbarproyectos: "Proyectos",
+    navbarConoceMas: "Conoce más",
+    navbarcontacto: "Contacto",
+    navbarIdioma: "Idioma",
+
+    // --- TITULO PROYECTO ---
+    tituloProyecto: "Las Chacras Haus – Bariloche",
+    subtituloProyecto: "Un desarrollo exclusivo con vistas privilegiadas, inmerso en la naturaleza patagónica. Una oportunidad única de inversión y calidad de vida.",
+
+    sobreProyecto: "Sobre el proyecto",
+    arquitecto: "ARQUITECTO",
+    arquitectoNombre: "Enrique Erpen",
+    constructora: "EMPRESA CONSTRUCTORA",
+    constructoraNombre: "A confirmar",
+    anioMudanza: "AÑO DE MUDANZA",
+    anioMudanzaValor: "2025",
+    cantViviendas: "CANTIDAD DE VIVIENDAS",
+    cantViviendasValor: "21",
+
+    estadoProyecto: "Estado del proyecto",
+    avanceGeneral: "Avance general del desarrollo",
+    porcentajeGeneral: "40%",
+    fase1Titulo: "Fase 1 (estructura y obra gris)",
+    fase1Porcentaje: "90%",
+    estadoLinea1: "Losa sobre primer piso completa.",
+    estadoLinea2: "Finalizada la estructura en elevación sobre el frente norte.",
+    estadoLinea3: "En ejecución: elevación de unidades 8, 9 y 10.",
+
+    descripcionTitulo: "Seres Las Chacras Haus",
+    descripcionParrafo1: "En un entorno de ensueño donde la arquitectura se fusiona con la naturaleza, Las Chacras Haus redefine la experiencia de vivir frente al lago Nahuel Huapi.",
+    descripcionParrafo2: "Cada hogar está diseñado con materiales nobles y criterios sustentables, ofreciendo confort, armonía y conexión con el paisaje patagónico.",
+    descripcionParrafo3: "Ubicado a solo 15 minutos del centro de Bariloche, el complejo cuenta con más de 11.000 m², 80 metros de playa privada y vertientes naturales que recorren el predio.",
+    descripcionParrafo4: "Un verdadero refugio moderno, ideal para quienes buscan calidad de vida, inversión y paisaje en partes iguales.",
+
+    detallesTitulo: "Diseñado para la sustentabilidad",
+    detallesParrafo1: "El equilibrio con la naturaleza es condición para una vida plena.",
+    detallesParrafo2: "Contemplamos el uso de materiales de bajo impacto ambiental y de excelente prestación para la aislación térmica y acústica.",
+    detallesParrafo3: "Implementaremos sistemas de eficiencia energética, como termotanques solares, paneles fotovoltaicos e iluminación con sensores fotovoltaicos.",
+    detallesParrafo4: "El agua potable se obtendrá de pozo y se tratará con biodigestores y planta potabilizadora. El gas resultante se utilizará en el SUM y pileta climatizada.",
+    detallesParrafo5: "Las Chacras Haus es un desarrollo inmobiliario. Pero antes, es un concepto. Una forma de entender la vida en armonía con la naturaleza, con los demás y con uno mismo.",
+    comunesTitulo: "Espacios comunes",
+    comunesParrafo1: "Contará con spa, pileta climatizada y SUM, con espacios ideales para meditación y yoga.",
+    comunesParrafo2: "El predio estará totalmente parquizado y contará con un muelle propio para embarcaciones o simplemente contemplar el entorno natural del Nahuel Huapi.",
+
+    videoTitulo: "Avance de obra",
+    videoDescripcion: "Te compartimos un recorrido audiovisual que muestra el estado actual de la construcción y los últimos progresos en Güemes Haus.",
+
+    // --- FOOTER ---
+    footerCiudad: "Ciudad de Buenos Aires, Argentina.",
+    footerTelefono: "Teléfono:",
+    footerEmail: "Email:",
+    footerConocenos: "Conocenos",
+    footerDesarrollado: "Desarrollado por",
+    footerConoceTrabajos: "conoce mis trabajos",
+    footerEnPorfolio: "En mi porfolio",
+    }
+  },
+  en: {
+    translation: {
+    headTitle: "Las Chacras - Seres Developments",
+    headDesc: "Exclusive lots in San Martín de los Andes with panoramic views. Nature, modern design and a smart investment.",
+    headKeywords: "Las Chacras, Seres Developments, San Martín de los Andes, lots for sale, Patagonia, real estate investment, nature, modern architecture, urban development, real estate Argentina",
+
+    navbarInicio: "Home",
+    navbarNosotros: "About Us",
+    navbarproyectos: "Projects",
+    navbarConoceMas: "Learn more",
+    navbarcontacto: "Contact",
+    navbarIdioma: "Language",
+
+    tituloProyecto: "Las Chacras Haus – Bariloche",
+    subtituloProyecto: "An exclusive development with privileged views, immersed in Patagonian nature. A unique opportunity for investment and quality of life.",
+
+    sobreProyecto: "About the project",
+    arquitecto: "ARCHITECT",
+    arquitectoNombre: "Enrique Erpen",
+    constructora: "CONSTRUCTION COMPANY",
+    constructoraNombre: "To be confirmed",
+    anioMudanza: "MOVE-IN YEAR",
+    anioMudanzaValor: "2025",
+    cantViviendas: "NUMBER OF UNITS",
+    cantViviendasValor: "21",
+
+    estadoProyecto: "Project Status",
+    avanceGeneral: "Overall development progress",
+    porcentajeGeneral: "40%",
+    fase1Titulo: "Phase 1 (structure and grey work)",
+    fase1Porcentaje: "90%",
+    estadoLinea1: "Slab over first floor completed.",
+    estadoLinea2: "Structure completed on the north front elevation.",
+    estadoLinea3: "In progress: elevation of units 8, 9 and 10.",
+
+    descripcionTitulo: "Seres Las Chacras Haus",
+    descripcionParrafo1: "In a dreamlike setting where architecture merges with nature, Las Chacras Haus redefines the experience of living by Lake Nahuel Huapi.",
+    descripcionParrafo2: "Each home is designed with noble materials and sustainable criteria, offering comfort, harmony, and connection with the Patagonian landscape.",
+    descripcionParrafo3: "Located just 15 minutes from downtown Bariloche, the complex spans more than 11,000 m², includes 80 meters of private beach, and natural streams that flow through the property.",
+    descripcionParrafo4: "A true modern refuge, ideal for those seeking quality of life, investment, and landscape in equal measure.",
+
+    detallesTitulo: "Designed for sustainability",
+    detallesParrafo1: "Balance with nature is essential for a full life.",
+    detallesParrafo2: "We consider the use of low environmental impact materials with excellent thermal and acoustic insulation performance.",
+    detallesParrafo3: "We will implement energy efficiency systems such as solar water heaters, photovoltaic panels, and lighting with photovoltaic sensors.",
+    detallesParrafo4: "Drinking water will be sourced from a well and treated with biodigesters and a purification plant. The resulting gas will be used in the multipurpose room and heated pool.",
+    detallesParrafo5: "Las Chacras Haus is a real estate development. But above all, it is a concept: a way of understanding life in harmony with nature, with others, and with oneself.",
+    comunesTitulo: "Common areas",
+    comunesParrafo1: "It will feature a spa, heated pool, and multipurpose room, with spaces ideal for meditation and yoga.",
+    comunesParrafo2: "The grounds will be fully landscaped and will include a private dock for boats or simply enjoying the natural surroundings of Lake Nahuel Huapi.",
+
+    videoTitulo: "Construction progress",
+    videoDescripcion: "We share with you a video tour showing the current state of construction and the latest progress at Güemes Haus.", 
+
+    footerCiudad: "Buenos Aires City, Argentina.",
+    footerTelefono: "Phone:",
+    footerEmail: "Email:",
+    footerConocenos: "Get to know us",
+    footerDesarrollado: "Developed by",
+    footerConoceTrabajos: "see my work",
+    footerEnPorfolio: "In my portfolio"
+    }
+  },
+  pt: {
+    translation: {
+    headTitle: "Las Chacras - Seres Desenvolvimentos",
+    headDesc: "Lotes exclusivos em San Martín de los Andes com vistas panorâmicas. Natureza, design moderno e um investimento inteligente.",
+    headKeywords: "Las Chacras, Seres Desenvolvimentos, San Martín de los Andes, lotes à venda, Patagônia, investimento imobiliário, natureza, arquitetura moderna, desenvolvimento urbano, real estate Argentina",
+
+    navbarInicio: "Início",
+    navbarNosotros: "Sobre nós",
+    navbarproyectos: "Projetos",
+    navbarConoceMas: "Saiba mais",
+    navbarcontacto: "Contato",
+    navbarIdioma: "Idioma",
+
+    tituloProyecto: "Las Chacras Haus – Bariloche",
+    subtituloProyecto: "Um empreendimento exclusivo com vistas privilegiadas, imerso na natureza patagônica. Uma oportunidade única de investimento e qualidade de vida.",
+
+   sobreProyecto: "Sobre o projeto",
+    arquitecto: "ARQUITETO",
+    arquitectoNombre: "Enrique Erpen",
+    constructora: "EMPRESA CONSTRUTORA",
+    constructoraNombre: "A confirmar",
+    anioMudanza: "ANO DE MUDANÇA",
+    anioMudanzaValor: "2025",
+    cantViviendas: "QUANTIDADE DE MORADIAS",
+    cantViviendasValor: "21",
+
+    estadoProyecto: "Estado do projeto",
+    avanceGeneral: "Avanço geral do desenvolvimento",
+    porcentajeGeneral: "40%",
+    fase1Titulo: "Fase 1 (estrutura e obra bruta)",
+    fase1Porcentaje: "90%",
+    estadoLinea1: "Laje sobre o primeiro andar completa.",
+    estadoLinea2: "Estrutura concluída na elevação da frente norte.",
+    estadoLinea3: "Em execução: elevação das unidades 8, 9 e 10.",
+
+    descripcionTitulo: "Seres Las Chacras Haus",
+    descripcionParrafo1: "Em um cenário de sonho onde a arquitetura se funde com a natureza, Las Chacras Haus redefine a experiência de viver à beira do lago Nahuel Huapi.",
+    descripcionParrafo2: "Cada lar é projetado com materiais nobres e critérios sustentáveis, oferecendo conforto, harmonia e conexão com a paisagem patagônica.",
+    descripcionParrafo3: "Localizado a apenas 15 minutos do centro de Bariloche, o complexo possui mais de 11.000 m², 80 metros de praia privativa e nascentes naturais que percorrem o terreno.",
+    descripcionParrafo4: "Um verdadeiro refúgio moderno, ideal para quem busca qualidade de vida, investimento e paisagem em partes iguais.",
+
+    detallesTitulo: "Projetado para a sustentabilidade",
+    detallesParrafo1: "O equilíbrio com a natureza é condição para uma vida plena.",
+    detallesParrafo2: "Consideramos o uso de materiais de baixo impacto ambiental e de excelente desempenho para isolamento térmico e acústico.",
+    detallesParrafo3: "Implementaremos sistemas de eficiência energética, como aquecedores solares, painéis fotovoltaicos e iluminação com sensores fotovoltaicos.",
+    detallesParrafo4: "A água potável será obtida de poço e tratada com biodigestores e estação de purificação. O gás resultante será utilizado no salão de usos múltiplos e na piscina aquecida.",
+    detallesParrafo5: "Las Chacras Haus é um empreendimento imobiliário. Mas antes, é um conceito: uma forma de compreender a vida em harmonia com a natureza, com os outros e consigo mesmo.",
+    comunesTitulo: "Espaços comuns",
+    comunesParrafo1: "Terá spa, piscina aquecida e salão de usos múltiplos, com espaços ideais para meditação e yoga.",
+    comunesParrafo2: "O terreno será totalmente ajardinado e contará com um píer próprio para embarcações ou simplesmente para contemplar o ambiente natural do Lago Nahuel Huapi.",
+
+    videoTitulo: "Avanço da obra",
+    videoDescripcion: "Compartilhamos um vídeo que mostra o estado atual da construção e os últimos avanços no Güemes Haus.",
+
+    footerCiudad: "Cidade de Buenos Aires, Argentina.",
+    footerTelefono: "Telefone:",
+    footerEmail: "Email:",
+    footerConocenos: "Conheça-nos",
+    footerDesarrollado: "Desenvolvido por",
+    footerConoceTrabajos: "conheça meus trabalhos",
+    footerEnPorfolio: "No meu portfólio" 
+    }
+  }
+};
+
+  // Inicializa i18next
+  i18next.init({
+    lng: localStorage.getItem("lang") || "es", // idioma guardado o español por defecto
+    debug: false,
+    resources
+  }, function(err, t) {
+    updateContent(); // aplicar traducciones al cargar
+  });
+
+  function updateContent() {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      el.textContent = i18next.t(key);
+    });
+  }
+
+  function setLanguage(lang) {
+    i18next.changeLanguage(lang, () => {
+      updateContent();
+      localStorage.setItem("lang", lang);
+    });
+  }
+</script>
 
 </body>
 
