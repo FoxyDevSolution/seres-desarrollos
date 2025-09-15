@@ -27,11 +27,13 @@
   <!--! Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+    <script src="https://unpkg.com/i18next@22.5.1/dist/umd/i18next.min.js"></script>
+
 </head>
 
 <body class="portfolio-details-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
+<header id="header" class="header d-flex align-items-center fixed-top">
 <!--! NAVBAR PARA PROYECTOS -->
 <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
@@ -95,24 +97,22 @@
 
 </div>
 <!-- ! NAVBAR PARA PROYECTOS FINAL -->
+</header>
 
-  </header>
+<main class="main">
 
-  <main class="main">
-
-<!--*TITULO DEL PROYECTO -->
 <div class="page-title accent-background">
   <div class="container position-relative">
-    <h1>Güemes Haus – Bariloche</h1>
-    <p>Departamentos modernos con vistas al Lago Nahuel Huapi, a solo 12 cuadras del centro. <br> Diseño contemporáneo, confort y naturaleza en equilibrio.</p>
+    <h1 data-i18n="guemesTitulo">Güemes Haus – Bariloche</h1>
+    <p data-i18n="guemesDescripcion">Departamentos modernos con vistas al Lago Nahuel Huapi, a solo 12 cuadras del centro. <br> Diseño contemporáneo, confort y naturaleza en equilibrio.</p>
     <nav class="breadcrumbs">
       <ol>
-        <li><a href="index.html">Inicio</a></li>
-        <li class="current">Güemes Haus</li>
+        <li><a href="index.html" data-i18n="navbarInicio">Inicio</a></li>
+        <li class="current" data-i18n="guemesBreadcrumb">Güemes Haus</li>
       </ol>
     </nav>
   </div>
-</div><!-- End Page Title -->
+</div>
 
 
 
@@ -166,62 +166,58 @@
       </div>
 
       <!-- Columna info del proyecto -->
-      <div class="col-lg-4">
+     <div class="col-lg-4">
         <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-          <h3>Sobre el proyecto</h3>
+          <h3 data-i18n="guemesSobreTitulo">Sobre el proyecto</h3>
           <ul>
-            <li><strong>ARQUITECTO</strong>: Enrique Erpen</li>
-            <li><strong>EMPRESA CONSTRUCTORA</strong>: JISA</li>
-            <li><strong>AÑO DE MUDANZA</strong>: A confirmar</li>
-            <li><strong>CANTIDAD DE UNIDADES</strong>: 30 departamentos</li>
+            <li><strong data-i18n="guemesArquitecto">ARQUITECTO</strong>: Enrique Erpen</li>
+            <li><strong data-i18n="guemesConstructora">EMPRESA CONSTRUCTORA</strong>: JISA</li>
+            <li><strong data-i18n="guemesMudanza">AÑO DE MUDANZA</strong>: <span data-i18n="guemesMudanzaValor">A confirmar</span></li>
+            <li><strong data-i18n="guemesUnidades">CANTIDAD DE UNIDADES</strong>: <span data-i18n="guemesUnidadesValor">30 departamentos</span></li>
           </ul>
         </div>
       </div>
-
-    </div><!-- /PRIMERA FILA -->
+    </div>
 
 
     <!--? SEGUNDA FILA: Estado + Descripción -->
     <div class="row gy-4">
-
-      <!-- Columna estado del proyecto -->
       <div class="col-lg-4">
         <div class="portfolio-info" data-aos="fade-up" data-aos-delay="250">
-          <h3>Estado del proyecto</h3>
-          <p class="mb-1">Avance general del desarrollo</p>
+          <h3 data-i18n="guemesEstadoTitulo">Estado del proyecto</h3>
+          <p class="mb-1" data-i18n="guemesAvanceGeneral">Avance general del desarrollo</p>
           <div class="progress mb-4">
             <div class="progress-bar bg-success" style="width: 75%;">75%</div>
           </div>
-          <p class="mb-1">Instalación sanitaria</p>
+          <p class="mb-1" data-i18n="guemesSanitaria">Instalación sanitaria</p>
           <div class="progress mb-4">
             <div class="progress-bar bg-success" style="width: 95%;">95%</div>
           </div>
-          <p class="mb-1">Instalación electrica</p>
+          <p class="mb-1" data-i18n="guemesElectrica">Instalación electrica</p>
           <div class="progress mb-4">
             <div class="progress-bar bg-success" style="width: 95%;">95%</div>
           </div>
-          <p class="mb-1">Termomecánica</p>
+          <p class="mb-1" data-i18n="guemesTermomecanica">Termomecánica</p>
           <div class="progress mb-4">
             <div class="progress-bar bg-success" style="width: 90%;">90%</div>
           </div>
-          <p class="mb-1">Finalización de revoques en fachada central.</p>
-          <p class="mb-1">Avance en revoques interiores del piso 1 al 5.</p>
-          <p class="mb-1">Próximamente: carpinterías de PVC al frente y chapas medianeras.</p>
+          <p class="mb-1" data-i18n="guemesFachada">Finalización de revoques en fachada central.</p>
+          <p class="mb-1" data-i18n="guemesRevoques">Avance en revoques interiores del piso 1 al 5.</p>
+          <p class="mb-1" data-i18n="guemesProximamente">Próximamente: carpinterías de PVC al frente y chapas medianeras.</p>
         </div>
-
       </div>
 
 <!-- Columna descripción -->
 <div class="col-lg-8">
   <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-    <h2>Güemes Haus</h2>
-    <p>En Barrio Belgrano, estamos desarrollando un edificio con 30 departamentos que varían entre 40 y 80 m², algunos de ellos con un loft adicional de 11 m². Su ubicación estratégica ofrece vistas al Lago Nahuel Huapi y se encuentra a tan solo 12 cuadras del centro de la ciudad, brindando comodidad y accesibilidad.</p>
+    <h2 data-i18n="guemesDescripcionTitulo">Güemes Haus</h2>
+    <p data-i18n="guemesDescripcion1">En Barrio Belgrano, estamos desarrollando un edificio con 30 departamentos que varían entre 40 y 80 m², algunos de ellos con un loft adicional de 11 m². Su ubicación estratégica ofrece vistas al Lago Nahuel Huapi y se encuentra a tan solo 12 cuadras del centro de la ciudad, brindando comodidad y accesibilidad.</p>
 
-    <p>Diseñado con una visión contemporánea, Güemes Haus se destaca por su arquitectura moderna, escasa competencia en el mercado y una cuidada oferta de amenities.</p>
+    <p data-i18n="guemesDescripcion2">Diseñado con una visión contemporánea, Güemes Haus se destaca por su arquitectura moderna, escasa competencia en el mercado y una cuidada oferta de amenities.</p>
 
-    <p>El proyecto promueve un estilo de vida en contacto con la naturaleza, con una estética actual y sostenible que se integra al entorno y enriquece el patrimonio arquitectónico local.</p>
+    <p data-i18n="guemesDescripcion3">El proyecto promueve un estilo de vida en contacto con la naturaleza, con una estética actual y sostenible que se integra al entorno y enriquece el patrimonio arquitectónico local.</p>
 
-    <p>El diseño emplea materiales de bajo mantenimiento y aspecto natural, con variedad de texturas y tonos que realzan su identidad visual.</p>
+    <p data-i18n="guemesDescripcion4">El diseño emplea materiales de bajo mantenimiento y aspecto natural, con variedad de texturas y tonos que realzan su identidad visual.</p>
   </div>
 </div>
 
@@ -233,13 +229,13 @@
 <!--? Columna de detalles -->
 <div class="col-lg-6 portfolio-description" data-aos="fade-up" data-aos-delay="300">
 
-  <h2>Diseño arquitectónico</h2>
-  <p>Güemes Haus presenta una arquitectura de líneas contemporáneas, con materiales de bajo mantenimiento y aspecto natural que aportan calidez y carácter al proyecto.</p>
-  <p>El diseño propone un equilibrio entre estética moderna y funcionalidad, destacándose por su propuesta exclusiva con pocas unidades y amenities de calidad.</p>
+  <h2 data-i18n="guemesDisenoTitulo">Diseño arquitectónico</h2>
+  <p data-i18n="guemesDiseno1">Güemes Haus presenta una arquitectura de líneas contemporáneas, con materiales de bajo mantenimiento y aspecto natural que aportan calidez y carácter al proyecto.</p>
+  <p data-i18n="guemesDiseno2">El diseño propone un equilibrio entre estética moderna y funcionalidad, destacándose por su propuesta exclusiva con pocas unidades y amenities de calidad.</p>
 
-  <h2 class="mt-4">Un entorno privilegiado</h2>
-  <p>Su ubicación en el barrio Belgrano garantiza vistas al Lago Nahuel Huapi y cercanía al centro de Bariloche, combinando naturaleza, accesibilidad y comodidad.</p>
-  <p>El proyecto se integra al paisaje urbano con un enfoque sostenible, aportando valor al entorno y al patrimonio arquitectónico local.</p>
+  <h2 class="mt-4" data-i18n="guemesEntornoTitulo">Un entorno privilegiado</h2>
+  <p data-i18n="guemesEntorno1">Su ubicación en el barrio Belgrano garantiza vistas al Lago Nahuel Huapi y cercanía al centro de Bariloche, combinando naturaleza, accesibilidad y comodidad.</p>
+  <p data-i18n="guemesEntorno2">El proyecto se integra al paisaje urbano con un enfoque sostenible, aportando valor al entorno y al patrimonio arquitectónico local.</p>
 
 </div>
 
@@ -348,6 +344,194 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+<script>
+const resources = {
+  es: {
+    translation: {
+      navbarInicio: "Inicio",
+      navbarNosotros: "Nosotros",
+      navbarproyectos: "Proyectos",
+      navbarConoceMas: "Conoce más",
+      navbarcontacto: "Contacto",
+      navbarIdioma: "Idioma",
+      
+
+      guemesTitulo: "Güemes Haus – Bariloche",
+      guemesDescripcion: "Departamentos modernos con vistas al Lago Nahuel Huapi, a solo 12 cuadras del centro. Diseño contemporáneo, confort y naturaleza en equilibrio.",
+      guemesBreadcrumb: "Güemes Haus",
+      guemesSobreTitulo: "Sobre el proyecto",
+      guemesArquitecto: "ARQUITECTO",
+      guemesConstructora: "EMPRESA CONSTRUCTORA",
+      guemesMudanza: "AÑO DE MUDANZA",
+      guemesMudanzaValor: "A confirmar",
+      guemesUnidades: "CANTIDAD DE UNIDADES",
+      guemesUnidadesValor: "30 departamentos",
+      guemesEstadoTitulo: "Estado del proyecto",
+      guemesAvanceGeneral: "Avance general del desarrollo",
+      guemesSanitaria: "Instalación sanitaria",
+      guemesElectrica: "Instalación electrica",
+      guemesTermomecanica: "Termomecánica",
+      guemesFachada: "Finalización de revoques en fachada central.",
+      guemesRevoques: "Avance en revoques interiores del piso 1 al 5.",
+      guemesProximamente: "Próximamente: carpinterías de PVC al frente y chapas medianeras.",
+      guemesDescripcionTitulo: "Güemes Haus",
+      guemesDescripcion1: "En Barrio Belgrano, estamos desarrollando un edificio con 30 departamentos que varían entre 40 y 80 m², algunos de ellos con un loft adicional de 11 m². Su ubicación estratégica ofrece vistas al Lago Nahuel Huapi y se encuentra a tan solo 12 cuadras del centro de la ciudad, brindando comodidad y accesibilidad.",
+      guemesDescripcion2: "Diseñado con una visión contemporánea, Güemes Haus se destaca por su arquitectura moderna, escasa competencia en el mercado y una cuidada oferta de amenities.",
+      guemesDescripcion3: "El proyecto promueve un estilo de vida en contacto con la naturaleza, con una estética actual y sostenible que se integra al entorno y enriquece el patrimonio arquitectónico local.",
+      guemesDescripcion4: "El diseño emplea materiales de bajo mantenimiento y aspecto natural, con variedad de texturas y tonos que realzan su identidad visual.",
+      guemesDisenoTitulo: "Diseño arquitectónico",
+      guemesDiseno1: "Güemes Haus presenta una arquitectura de líneas contemporáneas, con materiales de bajo mantenimiento y aspecto natural que aportan calidez y carácter al proyecto.",
+      guemesDiseno2: "El diseño propone un equilibrio entre estética moderna y funcionalidad, destacándose por su propuesta exclusiva con pocas unidades y amenities de calidad.",
+      guemesEntornoTitulo: "Un entorno privilegiado",
+      guemesEntorno1: "Su ubicación en el barrio Belgrano garantiza vistas al Lago Nahuel Huapi y cercanía al centro de Bariloche, combinando naturaleza, accesibilidad y comodidad.",
+      guemesEntorno2: "El proyecto se integra al paisaje urbano con un enfoque sostenible, aportando valor al entorno y al patrimonio arquitectónico local.",
+      // Video section
+      videoTitulo: "Avance de Obra",
+      videoDescripcion: "Compartimos un resumen en video del progreso de la construcción para que sigas de cerca cada etapa del proyecto.",
+      
+      footerCiudad: "Ciudad de Buenos Aires, Argentina.",
+      footerTelefono: "Teléfono:",
+      footerEmail: "Email:",
+      footerConocenos: "Conocenos",
+      footerDesarrollado: "Desarrollado por",
+      footerConoceTrabajos: "conoce mis trabajos",
+      footerEnPorfolio: "En mi porfolio"
+    }
+  },
+  en: {
+    translation: {
+      navbarInicio: "Home",
+      navbarNosotros: "About Us",
+      navbarproyectos: "Projects",
+      navbarConoceMas: "Learn more",
+      navbarcontacto: "Contact",
+      navbarIdioma: "Language",
+
+      guemesTitulo: "Güemes Haus – Bariloche",
+      guemesDescripcion: "Modern apartments with views of Lake Nahuel Huapi, just 12 blocks from downtown. Contemporary design, comfort, and nature in harmony.",
+      guemesBreadcrumb: "Güemes Haus",
+      guemesSobreTitulo: "About the project",
+      guemesArquitecto: "ARCHITECT",
+      guemesConstructora: "CONSTRUCTION COMPANY",
+      guemesMudanza: "MOVE-IN YEAR",
+      guemesMudanzaValor: "To be confirmed",
+      guemesUnidades: "NUMBER OF UNITS",
+      guemesUnidadesValor: "30 apartments",
+      guemesEstadoTitulo: "Project status",
+      guemesAvanceGeneral: "Overall project progress",
+      guemesSanitaria: "Plumbing installation",
+      guemesElectrica: "Electrical installation",
+      guemesTermomecanica: "HVAC",
+      guemesFachada: "Completion of plastering on the central facade.",
+      guemesRevoques: "Progress on interior plastering from floors 1 to 5.",
+      guemesProximamente: "Coming soon: PVC windows at the front and sheet metal on the sides.",
+      guemesDescripcionTitulo: "Güemes Haus",
+      guemesDescripcion1: "In Belgrano neighborhood, we are developing a building with 30 apartments ranging from 40 to 80 m², some with an additional 11 m² loft. Its strategic location offers views of Lake Nahuel Huapi and is just 12 blocks from downtown, providing comfort and accessibility.",
+      guemesDescripcion2: "Designed with a contemporary vision, Güemes Haus stands out for its modern architecture, little competition in the market, and a carefully curated selection of amenities.",
+      guemesDescripcion3: "The project promotes a lifestyle in contact with nature, with a modern and sustainable aesthetic that integrates with the surroundings and enriches the local architectural heritage.",
+      guemesDescripcion4: "The design uses low-maintenance, natural-looking materials, with a variety of textures and tones that enhance its visual identity.",
+      guemesDisenoTitulo: "Architectural design",
+      guemesDiseno1: "Güemes Haus features contemporary lines, with low-maintenance, natural-looking materials that bring warmth and character to the project.",
+      guemesDiseno2: "The design proposes a balance between modern aesthetics and functionality, standing out for its exclusive proposal with few units and quality amenities.",
+      guemesEntornoTitulo: "A privileged environment",
+      guemesEntorno1: "Its location in the Belgrano neighborhood guarantees views of Lake Nahuel Huapi and proximity to downtown Bariloche, combining nature, accessibility, and comfort.",
+      guemesEntorno2: "The project integrates into the urban landscape with a sustainable approach, adding value to the environment and local architectural heritage.",
+      // Video section
+      videoTitulo: "Construction Progress",
+      videoDescripcion: "We share a video summary of the construction progress so you can follow each stage of the project closely.",
+
+      footerCiudad: "Buenos Aires City, Argentina.",
+      footerTelefono: "Phone:",
+      footerEmail: "Email:",
+      footerConocenos: "Get to know us",
+      footerDesarrollado: "Developed by",
+      footerConoceTrabajos: "see my work",
+      footerEnPorfolio: "In my portfolio"
+
+    }
+  },
+  pt: {
+    translation: {
+      navbarInicio: "Início",
+      navbarNosotros: "Sobre nós",
+      navbarproyectos: "Projetos",
+      navbarConoceMas: "Saiba mais",
+      navbarcontacto: "Contato",
+      navbarIdioma: "Idioma",
+
+
+      guemesTitulo: "Güemes Haus – Bariloche",
+      guemesDescripcion: "Apartamentos modernos com vista para o Lago Nahuel Huapi, a apenas 12 quadras do centro. Design contemporâneo, conforto e natureza em harmonia.",
+      guemesBreadcrumb: "Güemes Haus",
+      guemesSobreTitulo: "Sobre o projeto",
+      guemesArquitecto: "ARQUITETO",
+      guemesConstructora: "CONSTRUTORA",
+      guemesMudanza: "ANO DE MUDANÇA",
+      guemesMudanzaValor: "A confirmar",
+      guemesUnidades: "QUANTIDADE DE UNIDADES",
+      guemesUnidadesValor: "30 apartamentos",
+      guemesEstadoTitulo: "Status do projeto",
+      guemesAvanceGeneral: "Progresso geral do desenvolvimento",
+      guemesSanitaria: "Instalação sanitária",
+      guemesElectrica: "Instalação elétrica",
+      guemesTermomecanica: "Termomecânica",
+      guemesFachada: "Finalização dos rebocos na fachada central.",
+      guemesRevoques: "Progresso nos rebocos internos do 1º ao 5º andar.",
+      guemesProximamente: "Em breve: esquadrias de PVC na frente e chapas laterais.",
+      guemesDescripcionTitulo: "Güemes Haus",
+      guemesDescripcion1: "No bairro Belgrano, estamos desenvolvendo um edifício com 30 apartamentos que variam entre 40 e 80 m², alguns deles com um loft adicional de 11 m². Sua localização estratégica oferece vistas para o Lago Nahuel Huapi e está a apenas 12 quadras do centro da cidade, proporcionando conforto e acessibilidade.",
+      guemesDescripcion2: "Projetado com uma visão contemporânea, o Güemes Haus se destaca por sua arquitetura moderna, pouca concorrência no mercado e uma oferta cuidadosa de amenities.",
+      guemesDescripcion3: "O projeto promove um estilo de vida em contato com a natureza, com uma estética atual e sustentável que se integra ao entorno e enriquece o patrimônio arquitetônico local.",
+      guemesDescripcion4: "O design utiliza materiais de baixa manutenção e aspecto natural, com variedade de texturas e tons que realçam sua identidade visual.",
+      guemesDisenoTitulo: "Design arquitetônico",
+      guemesDiseno1: "O Güemes Haus apresenta uma arquitetura de linhas contemporâneas, com materiais de baixa manutenção e aspecto natural que trazem aconchego e caráter ao projeto.",
+      guemesDiseno2: "O design propõe um equilíbrio entre estética moderna e funcionalidade, destacando-se por sua proposta exclusiva com poucas unidades e amenities de qualidade.",
+      guemesEntornoTitulo: "Um entorno privilegiado",
+      guemesEntorno1: "Sua localização no bairro Belgrano garante vistas para o Lago Nahuel Huapi e proximidade ao centro de Bariloche, combinando natureza, acessibilidade e conforto.",
+      guemesEntorno2: "O projeto se integra à paisagem urbana com uma abordagem sustentável, agregando valor ao entorno e ao patrimônio arquitetônico local.",
+      // Video section
+      videoTitulo: "Progresso da Obra",
+      videoDescripcion: "Compartilhamos um vídeo resumo do progresso da construção para que você acompanhe de perto cada etapa do projeto.",
+
+      footerCiudad: "Cidade de Buenos Aires, Argentina.",
+      footerTelefono: "Telefone:",
+      footerEmail: "Email:",
+      footerConocenos: "Conheça-nos",
+      footerDesarrollado: "Desenvolvido por",
+      footerConoceTrabajos: "conheça meus trabalhos",
+      footerEnPorfolio: "No meu portfólio"      
+    }
+  }
+};
+
+  // Inicializa i18next
+  i18next.init({
+    lng: localStorage.getItem("lang") || "es", // idioma guardado o español por defecto
+    debug: false,
+    resources
+  }, function(err, t) {
+    updateContent(); // aplicar traducciones al cargar
+  });
+
+  function updateContent() {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      el.textContent = i18next.t(key);
+    });
+  }
+
+  function setLanguage(lang) {
+    i18next.changeLanguage(lang, () => {
+      updateContent();
+      localStorage.setItem("lang", lang);
+    });
+  }
+</script>
+
+
+
+
 
 </body>
 
