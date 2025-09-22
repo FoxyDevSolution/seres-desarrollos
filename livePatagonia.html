@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Live Patagonia - Seres Desarrollos</title>
-  <meta name="description" content=" Seres Live Patagonia: desarrollo premium con amenities, ubicado a metros de la costanera y del centro de Bariloche. Seguridad, confort y diseño en un entorno natural único.">
-  <meta name="keywords" content="Seres Live Patagonia, Seres Desarrollos, departamentos en Bariloche, inversión inmobiliaria, arquitectura moderna, amenities, costanera, Lago Nahuel Huapi, centro de Bariloche, Patagonia">
+  <title data-i18n="tituloProyecto">Live Patagonia - Seres Desarrollos</title>
+  <meta name="description" content="Seres Live Patagonia: desarrollo premium con amenities, ubicado a metros de la costanera y del centro de Bariloche. Seguridad, confort y diseño en un entorno natural único." data-i18n="descripcionProyecto">
+  <meta name="keywords" content="Seres Live Patagonia, Seres Desarrollos, departamentos en Bariloche, inversión inmobiliaria, arquitectura moderna, amenities, costanera, Lago Nahuel Huapi, centro de Bariloche, Patagonia" data-i18n="keywordsProyecto">
 
   <!--! Favicons -->
   <link href="assets/img/isologo.png" rel="icon">
@@ -27,11 +27,16 @@
   <!--! Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <script src="https://unpkg.com/i18next@22.5.1/dist/umd/i18next.min.js"></script>
+</head>
+
 </head>
 
 <body class="portfolio-details-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
+<header id="header" class="header d-flex align-items-center fixed-top">
+
+
 <!--! NAVBAR PARA PROYECTOS -->
 <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
@@ -70,7 +75,7 @@
           </li>
           <!--* PROYECTOS - BUENOS AIRES -->
           <li><a href="index.html?filter=filter-product#portfolio"><span>Buenos Aires</span></a></li>
-          <li><a href="index.html?filter=filter-branding#portfolio"><span data-i18n="navbarConoceMas">Conoce más</span></a></li>
+          <li><a href="index.html?filter=filter-branding#portfolio"><span>Conoce más</span></a></li>
         </ul>
       </li>
 
@@ -100,21 +105,19 @@
 
   <main class="main">
 
-<!--*TITULO DEL PROYECTO -->
-<div class="page-title accent-background">
-  <div class="container position-relative">
-    <h1>Seres Live Patagonia – Bariloche</h1>
-    <p>Departamentos premium con amenities, a metros de la costanera y del centro de Bariloche. <br> Seguridad, confort y diseño en un entorno natural único.</p>
-    <nav class="breadcrumbs">
-      <ol>
-        <li><a href="index.html">Inicio</a></li>
-        <li class="current">Seres Live Patagonia</li>
-      </ol>
-    </nav>
-  </div>
-</div><!-- End Page Title -->
-
-
+    <!--*TITULO DEL PROYECTO -->
+  <div class="page-title accent-background">
+    <div class="container position-relative">
+      <h1 data-i18n="tituloProyecto">Seres Live Patagonia – Bariloche</h1>
+      <p data-i18n="descripcionProyecto">Departamentos premium con amenities, a metros de la costanera y del centro de Bariloche. <br> Seguridad, confort y diseño en un entorno natural único.</p>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="index.html" data-i18n="breadcrumbsInicio">Inicio</a></li>
+          <li class="current" data-i18n="breadcrumbsProyecto">Seres Live Patagonia</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
 
 
 
@@ -171,12 +174,12 @@
 <!-- Columna info del proyecto -->
 <div class="col-lg-4">
   <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-    <h3>Sobre el proyecto</h3>
+    <h3 data-i18n="sobreProyecto">Sobre el proyecto</h3>
     <ul>
-      <li><strong>ARQUITECTO</strong>: Enrique Erpen</li>
-      <li><strong>EMPRESA CONSTRUCTORA</strong>: A confirmar</li>
-      <li><strong>AÑO DE MUDANZA</strong>: A confirmar</li>
-      <li><strong>CANTIDAD DE UNIDADES</strong> <br>
+      <li><strong data-i18n="arquitecto">ARQUITECTO</strong>: Enrique Erpen</li>
+      <li><strong data-i18n="empresaConstructora">EMPRESA CONSTRUCTORA</strong>: A confirmar</li>
+      <li><strong data-i18n="anioMudanza">AÑO DE MUDANZA</strong>: A confirmar</li>
+      <li><strong data-i18n="cantidadUnidades">CANTIDAD DE UNIDADES</strong> <br>
         37 monoambientes de 38 m² <br>
         12 dos ambientes de 60 m² <br>
         8 tres ambientes con terraza de 55 m² cubiertos + 20 m² descubiertos <br>
@@ -196,15 +199,15 @@
 <!-- Columna estado del proyecto -->
 <div class="col-lg-4">
   <div class="portfolio-info" data-aos="fade-up" data-aos-delay="250">
-    <h3>Estado del proyecto</h3>
-    <p class="mb-1">Avance general del desarrollo</p>
+    <h3 data-i18n="estadoProyecto">Estado del proyecto</h3>
+    <p class="mb-1" data-i18n="avanceGeneral">Avance general del desarrollo</p>
     <div class="progress mb-4">
       <div class="progress-bar bg-success" style="width: 5%;">5%</div>
     </div>
-    <p class="mb-1">En etapa inicial.</p>
-    <p class="mb-1">Etapa preconstructiva en marcha.</p>
-    <p class="mb-1">Demolición edilicia programada para julio 2025.</p>
-    <p class="mb-1">Movimiento de suelo y nivelación del terreno en proceso.</p>
+    <p class="mb-1" data-i18n="enEtapaInicial">En etapa inicial.</p>
+    <p class="mb-1" data-i18n="etapaPreconstructiva">Etapa preconstructiva en marcha.</p>
+    <p class="mb-1" data-i18n="demolicionProgramada">Demolición edilicia programada para julio 2025.</p>
+    <p class="mb-1" data-i18n="movimientoSuelo">Movimiento de suelo y nivelación del terreno en proceso.</p>
   </div>
 </div>
 
@@ -212,14 +215,14 @@
 <!-- Columna descripción -->
 <div class="col-lg-8">
   <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-    <h2>Seres Live Patagonia</h2>
-    <p>Seres Live Patagonia es un desarrollo pensado para ofrecer seguridad, confort y diseño arquitectónico de alto nivel, manteniendo la calidad constructiva y la sustentabilidad. Combina espacios de uso exclusivo con amenities que promueven una vida equilibrada y saludable.</p>
+    <h2 data-i18n="descripcionTitulo">Seres Live Patagonia</h2>
+    <p data-i18n="descripcion1">Seres Live Patagonia es un desarrollo pensado para ofrecer seguridad, confort y diseño arquitectónico de alto nivel, manteniendo la calidad constructiva y la sustentabilidad. Combina espacios de uso exclusivo con amenities que promueven una vida equilibrada y saludable.</p>
 
-    <p>Ubicado a metros de la costanera y de la naciente del Arroyo Ñireco, y a pocas cuadras del centro de Bariloche, brinda un entorno natural privilegiado con acceso inmediato a gastronomía, comercios y áreas recreativas.</p>
+    <p data-i18n="descripcion2">Ubicado a metros de la costanera y de la naciente del Arroyo Ñireco, y a pocas cuadras del centro de Bariloche, brinda un entorno natural privilegiado con acceso inmediato a gastronomía, comercios y áreas recreativas.</p>
 
-    <p>El proyecto contempla 37 monoambientes de 38 m², 12 departamentos de dos ambientes de 60 m², 8 unidades de tres ambientes con terraza, y 4 de cuatro ambientes con amplias terrazas, además de 22 cocheras en subsuelo.</p>
+    <p data-i18n="descripcion3">El proyecto contempla 37 monoambientes de 38 m², 12 departamentos de dos ambientes de 60 m², 8 unidades de tres ambientes con terraza, y 4 de cuatro ambientes con amplias terrazas, además de 22 cocheras en subsuelo.</p>
 
-    <p>Entre sus características se destacan su arquitectura moderna, piscina cubierta climatizada, gimnasio, jardines, calefacción central de alta recuperación, aire acondicionado, carpintería de PVC con vidrios dobles, revestimientos en piedra pórfido patagónico y domótica para seguridad y confort.</p>
+    <p data-i18n="descripcion4">Entre sus características se destacan su arquitectura moderna, piscina cubierta climatizada, gimnasio, jardines, calefacción central de alta recuperación, aire acondicionado, carpintería de PVC con vidrios dobles, revestimientos en piedra pórfido patagónico y domótica para seguridad y confort.</p>
   </div>
 </div>
 
@@ -232,13 +235,13 @@
 <!--? Columna de detalles -->
 <div class="col-lg-6 portfolio-description" data-aos="fade-up" data-aos-delay="300">
 
-  <h2>Diseño arquitectónico</h2>
-  <p>Seres Live Patagonia presenta una arquitectura moderna e innovadora, con detalles en piedra pórfido patagónico, solados de granito reconstituido y carpintería de PVC símil madera con vidrios dobles, logrando una estética elegante y funcional.</p>
-  <p>El diseño prioriza el confort y la eficiencia, incorporando calefacción central de alta recuperación, aire acondicionado frío-calor y domótica para la automatización de seguridad, iluminación, cortinas y climatización.</p>
+  <h2 data-i18n="disenoArquitectonico">Diseño arquitectónico</h2>
+  <p data-i18n="diseno1">Seres Live Patagonia presenta una arquitectura moderna e innovadora, con detalles en piedra pórfido patagónico, solados de granito reconstituido y carpintería de PVC símil madera con vidrios dobles, logrando una estética elegante y funcional.</p>
+  <p data-i18n="diseno2">El diseño prioriza el confort y la eficiencia, incorporando calefacción central de alta recuperación, aire acondicionado frío-calor y domótica para la automatización de seguridad, iluminación, cortinas y climatización.</p>
 
-  <h2 class="mt-4">Un entorno privilegiado</h2>
-  <p>Ubicado a metros de la costanera y de la naciente del Arroyo Ñireco, en Bariloche, ofrece un entorno natural único con acceso inmediato a comercios, gastronomía y áreas recreativas.</p>
-  <p>Su propuesta de amenities —que incluye piscina cubierta climatizada, gimnasio y jardines— junto con su ubicación estratégica, lo convierten en una inversión ideal tanto para residencia como para alquiler temporario o permanente.</p>
+  <h2 class="mt-4" data-i18n="entornoPrivilegiado">Un entorno privilegiado</h2>
+  <p data-i18n="entorno1">Ubicado a metros de la costanera y de la naciente del Arroyo Ñireco, en Bariloche, ofrece un entorno natural único con acceso inmediato a comercios, gastronomía y áreas recreativas.</p>
+  <p data-i18n="entorno2">Su propuesta de amenities —que incluye piscina cubierta climatizada, gimnasio y jardines— junto con su ubicación estratégica, lo convierten en una inversión ideal tanto para residencia como para alquiler temporario o permanente.</p>
 
 </div>
 
@@ -259,23 +262,8 @@
 
 </section><!--* End Portfolio Details Section -->
 
-<!--* VIDEO DE AVANCE DE OBRA -->
-<section id="video-obra" class="section">
-  <div class="container" data-aos="fade-up">
-    <div class="section-title">
-      <h2 data-i18n="videoTitulo">Avance de Obra</h2>
-      <p data-i18n="videoDescripcion">
-        Compartimos un resumen en video del progreso de la construcción para que sigas de cerca cada etapa del proyecto.
-      </p>
-    </div>
-    <div class="video-container text-center">
-      <video controls width="80%" poster="assets/img/portfolio/seresLogo.webp">
-        <source src="assets/img/portfolio/dronArelauquen.mp4" type="video/mp4">
-        Tu navegador no soporta la reproducción de video.
-      </video>
-    </div>
-  </div>
-</section>
+
+
 
 
 <footer id="footer" class="footer dark-background">
@@ -354,6 +342,171 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+<script>
+  const resources = {
+  es: {
+    translation: {
+      navbarInicio: "Inicio",
+      navbarNosotros: "Nosotros",
+      navbarproyectos: "Proyectos",
+      navbarConoceMas: "Conoce más",
+      navbarcontacto: "Contacto",
+      navbarIdioma: "Idioma",
+
+
+      tituloProyecto: "Seres Live Patagonia – Bariloche",
+      descripcionProyecto: "Departamentos premium con amenities, a metros de la costanera y del centro de Bariloche. Seguridad, confort y diseño en un entorno natural único.",
+      breadcrumbsInicio: "Inicio",
+      breadcrumbsProyecto: "Seres Live Patagonia",
+      sobreProyecto: "Sobre el proyecto",
+      arquitecto: "ARQUITECTO",
+      empresaConstructora: "EMPRESA CONSTRUCTORA",
+      anioMudanza: "AÑO DE MUDANZA",
+      cantidadUnidades: "CANTIDAD DE UNIDADES",
+      estadoProyecto: "Estado del proyecto",
+      avanceGeneral: "Avance general del desarrollo",
+      enEtapaInicial: "En etapa inicial.",
+      etapaPreconstructiva: "Etapa preconstructiva en marcha.",
+      demolicionProgramada: "Demolición edilicia programada para julio 2025.",
+      movimientoSuelo: "Movimiento de suelo y nivelación del terreno en proceso.",
+      descripcionTitulo: "Seres Live Patagonia",
+      descripcion1: "Seres Live Patagonia es un desarrollo pensado para ofrecer seguridad, confort y diseño arquitectónico de alto nivel, manteniendo la calidad constructiva y la sustentabilidad. Combina espacios de uso exclusivo con amenities que promueven una vida equilibrada y saludable.",
+      descripcion2: "Ubicado a metros de la costanera y de la naciente del Arroyo Ñireco, y a pocas cuadras del centro de Bariloche, brinda un entorno natural privilegiado con acceso inmediato a gastronomía, comercios y áreas recreativas.",
+      descripcion3: "El proyecto contempla 37 monoambientes de 38 m², 12 departamentos de dos ambientes de 60 m², 8 unidades de tres ambientes con terraza, y 4 de cuatro ambientes con amplias terrazas, además de 22 cocheras en subsuelo.",
+      descripcion4: "Entre sus características se destacan su arquitectura moderna, piscina cubierta climatizada, gimnasio, jardines, calefacción central de alta recuperación, aire acondicionado, carpintería de PVC con vidrios dobles, revestimientos en piedra pórfido patagónico y domótica para seguridad y confort.",
+      disenoArquitectonico: "Diseño arquitectónico",
+      diseno1: "Seres Live Patagonia presenta una arquitectura moderna e innovadora, con detalles en piedra pórfido patagónico, solados de granito reconstituido y carpintería de PVC símil madera con vidrios dobles, logrando una estética elegante y funcional.",
+      diseno2: "El diseño prioriza el confort y la eficiencia, incorporando calefacción central de alta recuperación, aire acondicionado frío-calor y domótica para la automatización de seguridad, iluminación, cortinas y climatización.",
+      entornoPrivilegiado: "Un entorno privilegiado",
+      entorno1: "Ubicado a metros de la costanera y de la naciente del Arroyo Ñireco, en Bariloche, ofrece un entorno natural único con acceso inmediato a comercios, gastronomía y áreas recreativas.",
+      entorno2: "Su propuesta de amenities —que incluye piscina cubierta climatizada, gimnasio y jardines— junto con su ubicación estratégica, lo convierten en una inversión ideal tanto para residencia como para alquiler temporario o permanente.",
+      videoTitulo: "Avance de Obra",
+      videoDescripcion: "Compartimos un resumen en video del progreso de la construcción para que sigas de cerca cada etapa del proyecto.",
+      footerCiudad: "Ciudad de Buenos Aires, Argentina.",
+      footerTelefono: "Teléfono:",
+      footerEmail: "Email:",
+      footerConocenos: "Conocenos",
+      footerDesarrollado: "Desarrollado por",
+      footerConoceTrabajos: "conoce mis trabajos",
+      footerEnPorfolio: "En mi porfolio",
+    }
+  },
+  en: {
+    translation: {
+  navbarInicio: "Home",
+  navbarNosotros: "About Us",
+  navbarproyectos: "Projects",
+  navbarConoceMas: "Learn more",
+  navbarcontacto: "Contact",
+  navbarIdioma: "Language",
+  tituloProyecto: "Seres Live Patagonia – Bariloche",
+  descripcionProyecto: "Premium apartments with amenities, just meters from the waterfront and downtown Bariloche. Security, comfort, and design in a unique natural setting.",
+  breadcrumbsInicio: "Home",
+  breadcrumbsProyecto: "Seres Live Patagonia",
+  sobreProyecto: "About the project",
+  arquitecto: "ARCHITECT",
+  empresaConstructora: "CONSTRUCTION COMPANY",
+  anioMudanza: "MOVE-IN YEAR",
+  cantidadUnidades: "NUMBER OF UNITS",
+  estadoProyecto: "Project status",
+  avanceGeneral: "Overall project progress",
+  enEtapaInicial: "In initial stage.",
+  etapaPreconstructiva: "Pre-construction stage underway.",
+  demolicionProgramada: "Building demolition scheduled for July 2025.",
+  movimientoSuelo: "Earthworks and land leveling in progress.",
+  descripcionTitulo: "Seres Live Patagonia",
+  descripcion1: "Seres Live Patagonia is a development designed to offer security, comfort, and high-level architectural design, maintaining construction quality and sustainability. It combines exclusive-use spaces with amenities that promote a balanced and healthy lifestyle.",
+  descripcion2: "Located just meters from the waterfront and the source of the Ñireco Stream, and a few blocks from downtown Bariloche, it offers a privileged natural environment with immediate access to dining, shops, and recreational areas.",
+  descripcion3: "The project includes 37 studio apartments of 38 m², 12 one-bedroom apartments of 60 m², 8 two-bedroom units with terraces, and 4 three-bedroom units with large terraces, as well as 22 underground parking spaces.",
+  descripcion4: "Features include modern architecture, heated indoor pool, gym, gardens, high-efficiency central heating, air conditioning, PVC joinery with double glazing, Patagonian porphyry stone cladding, and home automation for security and comfort.",
+  disenoArquitectonico: "Architectural design",
+  diseno1: "Seres Live Patagonia features modern and innovative architecture, with Patagonian porphyry stone details, reconstituted granite flooring, and wood-look PVC joinery with double glazing, achieving an elegant and functional aesthetic.",
+  diseno2: "The design prioritizes comfort and efficiency, incorporating high-efficiency central heating, hot/cold air conditioning, and home automation for security, lighting, curtains, and climate control.",
+  entornoPrivilegiado: "A privileged environment",
+  entorno1: "Located just meters from the waterfront and the source of the Ñireco Stream in Bariloche, it offers a unique natural environment with immediate access to shops, dining, and recreational areas.",
+  entorno2: "Its amenities —including a heated indoor pool, gym, and gardens— together with its strategic location, make it an ideal investment for both residence and temporary or permanent rental.",
+  videoTitulo: "Construction Progress",
+  videoDescripcion: "We share a video summary of the construction progress so you can follow each stage of the project.",
+  footerCiudad: "Buenos Aires City, Argentina.",
+  footerTelefono: "Phone:",
+  footerEmail: "Email:",
+  footerConocenos: "Get to know us",
+  footerDesarrollado: "Developed by",
+  footerConoceTrabajos: "see my work",
+  footerEnPorfolio: "In my portfolio",
+}
+  },
+  pt: {
+    translation: {
+        navbarInicio: "Início",
+        navbarNosotros: "Sobre nós",
+        navbarproyectos: "Projetos",
+        navbarConoceMas: "Saiba mais",
+        navbarcontacto: "Contato",
+        navbarIdioma: "Idioma",
+        tituloProyecto: "Seres Live Patagonia Bariloche",
+        descripcionProyecto: "Apartamentos premium com amenities, a poucos metros da orla e do centro de Bariloche. Segurança, conforto e design em um ambiente natural único.",
+        breadcrumbsInicio: "Início",
+        breadcrumbsProyecto: "Seres Live Patagonia",
+        sobreProyecto: "Sobre o projeto",
+        arquitecto: "ARQUITETO",
+        empresaConstructora: "EMPRESA CONSTRUTORA",
+        anioMudanza: "ANO DE MUDANÇA",
+        cantidadUnidades: "QUANTIDADE DE UNIDADES",
+        estadoProyecto: "Estado do projeto",
+        avanceGeneral: "Avanço geral do desenvolvimento",
+        enEtapaInicial: "Em etapa inicial.",
+        etapaPreconstructiva: "Etapa pré-construtiva em andamento.",
+        demolicionProgramada: "Demolição do edifício programada para julho de 2025.",
+        movimientoSuelo: "Movimentação de solo e nivelamento do terreno em andamento.",
+        descripcionTitulo: "Seres Live Patagonia",
+        descripcion1: "Seres Live Patagonia é um empreendimento pensado para oferecer segurança, conforto e design arquitetônico de alto nível, mantendo a qualidade construtiva e a sustentabilidade. Combina espaços de uso exclusivo com amenities que promovem uma vida equilibrada e saudável.",
+        descripcion2: "Localizado a poucos metros da orla e da nascente do Arroyo Ñireco, e a poucas quadras do centro de Bariloche, oferece um ambiente natural privilegiado com acesso imediato a gastronomia, comércio e áreas recreativas.",
+        descripcion3: "O projeto contempla 37 estúdios de 38 m², 12 apartamentos de um quarto de 60 m², 8 unidades de dois quartos com terraço e 4 de três quartos com amplos terraços, além de 22 vagas de garagem subterrâneas.",
+        descripcion4: "Entre suas características destacam-se arquitetura moderna, piscina coberta aquecida, academia, jardins, aquecimento central de alta eficiência, ar-condicionado, esquadrias de PVC com vidros duplos, revestimento em pedra pórfiro patagônico e automação residencial para segurança e conforto.",
+        disenoArquitectonico: "Design arquitetônico",
+        diseno1: "Seres Live Patagonia apresenta uma arquitetura moderna e inovadora, com detalhes em pedra pórfiro patagônico, pisos de granito reconstituído e esquadrias de PVC imitando madeira com vidros duplos, alcançando uma estética elegante e funcional.",
+        diseno2: "O design prioriza o conforto e a eficiência, incorporando aquecimento central de alta eficiência, ar-condicionado quente/frio e automação residencial para segurança, iluminação, cortinas e climatização.",
+        entornoPrivilegiado: "Um ambiente privilegiado",
+        entorno1: "Localizado a poucos metros da orla e da nascente do Arroyo Ñireco, em Bariloche, oferece um ambiente natural único com acesso imediato a comércio, gastronomia e áreas recreativas.",
+        entorno2: "Sua proposta de amenities —que inclui piscina coberta aquecida, academia e jardins— junto com sua localização estratégica, o torna um investimento ideal tanto para residência quanto para aluguel temporário ou permanente.",
+        videoTitulo: "Progresso da Obra",
+        videoDescripcion: "Compartilhamos um vídeo resumo do progresso da construção para que você acompanhe cada etapa do projeto.",
+        footerCiudad: "Cidade de Buenos Aires, Argentina.",
+        footerTelefono: "Telefone:",
+        footerEmail: "Email:",
+        footerConocenos: "Conheça-nos",
+        footerDesarrollado: "Desenvolvido por",
+        footerConoceTrabajos: "veja meus trabalhos",
+      footerEnPorfolio: "No meu portfólio"
+    }
+  }
+};
+
+  // Inicializa i18next
+  i18next.init({
+    lng: localStorage.getItem("lang") || "es", // idioma guardado o español por defecto
+    debug: false,
+    resources
+  }, function(err, t) {
+    updateContent(); // aplicar traducciones al cargar
+  });
+
+  function updateContent() {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      el.textContent = i18next.t(key);
+    });
+  }
+
+  function setLanguage(lang) {
+    i18next.changeLanguage(lang, () => {
+      updateContent();
+      localStorage.setItem("lang", lang);
+    });
+  }
+</script>
 
 </body>
 

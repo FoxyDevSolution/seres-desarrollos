@@ -8,336 +8,492 @@
   <meta name="description" content="Desarrollo moderno en el corazón de Bariloche. Departamentos con diseño contemporáneo, vistas al lago y ubicación estratégica.">
   <meta name="keywords" content="San Martín Haus, Seres Desarrollos, departamentos en Bariloche, inversión inmobiliaria, arquitectura moderna, Lago Nahuel Huapi, centro de Bariloche, diseño contemporáneo, Patagonia">
 
-  <!--! Favicons -->
   <link href="assets/img/isologo.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!--! Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-  <!--! Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!--! Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <script src="https://unpkg.com/i18next@22.5.1/dist/umd/i18next.min.js"></script>
 </head>
 
 <body class="portfolio-details-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
-<!--! NAVBAR PARA PROYECTOS -->
-<div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-  <a href="index.html" class="logo d-flex align-items-center">
-    <img src="assets/img/logo.png" alt="Seres">
-  </a>
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="Seres">
+      </a>
 
-  <nav id="navmenu" class="navmenu">
-    <ul>
-      <!--* BOTON DE INICIO -->
-      <li><a href="index.html#hero"><span data-i18n="navbarInicio">Inicio</span></a></li>
-
-      <!--* BOTON DE NOSOTROS -->
-      <li><a href="index.html#about"><span data-i18n="navbarNosotros">Nosotros</span></a></li>
-
-      <!--* BOTON DE PROYECTOS -->
-      <li class="dropdown">
-        <a href="index.html#portfolio">
-          <span data-i18n="navbarproyectos">Proyectos</span> 
-          <i class="bi bi-chevron-down toggle-dropdown"></i>
-        </a>
+      <nav id="navmenu" class="navmenu">
         <ul>
-          <!--* PROYECTOS - BARILOCHE -->
+          <li><a href="index.html#hero"><span data-i18n="navbarInicio">Inicio</span></a></li>
+
+          <li><a href="index.html#about"><span data-i18n="navbarNosotros">Nosotros</span></a></li>
+
           <li class="dropdown">
-            <a href="index.html?filter=filter-app#portfolio">
-              <span>Bariloche</span> 
+            <a href="index.html#portfolio">
+              <span data-i18n="navbarproyectos">Proyectos</span>
               <i class="bi bi-chevron-down toggle-dropdown"></i>
             </a>
             <ul>
-              <li><a href="lasChacrasHaus.html">Las Chacras Haus</a></li>
-              <li><a href="arelauquenHaus.html">Arelauquen Haus</a></li>
-              <li><a href="guemesHaus.html">Güemes Haus</a></li>
-              <li><a href="sanMartin.html">San Martin Suites</a></li>
-              <li><a href="livePatagonia.html">Seres Live Patagonia</a></li>
+              <li class="dropdown">
+                <a href="index.html?filter=filter-app#portfolio">
+                  <span>Bariloche</span>
+                  <i class="bi bi-chevron-down toggle-dropdown"></i>
+                </a>
+                <ul>
+                  <li><a href="lasChacrasHaus.html">Las Chacras Haus</a></li>
+                  <li><a href="arelauquenHaus.html">Arelauquen Haus</a></li>
+                  <li><a href="guemesHaus.html">Güemes Haus</a></li>
+                  <li><a href="sanMartin.html">San Martin Suites</a></li>
+                  <li><a href="livePatagonia.html">Seres Live Patagonia</a></li>
+                </ul>
+              </li>
+              <li><a href="index.html?filter=filter-product#portfolio"><span>Buenos Aires</span></a></li>
+              <li><a href="index.html?filter=filter-branding#portfolio"><span data-i18n="navbarConoceMas">Conoce más</span></a></li>
             </ul>
           </li>
-          <!--* PROYECTOS - BUENOS AIRES -->
-          <li><a href="index.html?filter=filter-product#portfolio"><span>Buenos Aires</span></a></li>
-          <li><a href="index.html?filter=filter-branding#portfolio"><span data-i18n="navbarConoceMas">Conoce más</span></a></li>
+
+          <li><a href="index.html#contact"><span data-i18n="navbarcontacto">Contacto</span></a></li>
+
+          <li class="dropdown">
+            <a href="#">
+              <span data-i18n="navbarIdioma">Idioma</span>
+              <i class="bi bi-chevron-down toggle-dropdown"></i>
+            </a>
+            <ul>
+              <li><a href="#" onclick="setLanguage('es'); return false;">Español</a></li>
+              <li><a href="#" onclick="setLanguage('en'); return false;">English</a></li>
+              <li><a href="#" onclick="setLanguage('pt'); return false;">Português</a></li>
+            </ul>
+          </li>
         </ul>
-      </li>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
 
-      <!--* BOTON DE CONTACTO -->
-      <li><a href="index.html#contact"><span data-i18n="navbarcontacto">Contacto</span></a></li>
-
-      <!--* BOTON DE IDIOMA -->
-      <li class="dropdown">
-        <a href="#">
-          <span data-i18n="navbarIdioma">Idioma</span> 
-          <i class="bi bi-chevron-down toggle-dropdown"></i>
-        </a>
-        <ul>
-          <li><a href="#" onclick="setLanguage('es'); return false;">Español</a></li>
-          <li><a href="#" onclick="setLanguage('en'); return false;">English</a></li>
-          <li><a href="#" onclick="setLanguage('pt'); return false;">Português</a></li>
-        </ul>
-      </li>
-    </ul>
-    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-  </nav>
-
-</div>
-<!-- ! NAVBAR PARA PROYECTOS FINAL -->
-
-  </header>
+    </div>
+    </header>
 
   <main class="main">
 
-<!--*TITULO DEL PROYECTO -->
-<div class="page-title accent-background">
-  <div class="container position-relative">
-    <h1>San Martín Suites – Bariloche</h1>
-    <p>Departamentos de diseño contemporáneo en pleno centro de Bariloche. <br> Confort, vistas únicas y ubicación estratégica a pasos del lago y la naturaleza.</p>
-    <nav class="breadcrumbs">
-      <ol>
-        <li><a href="index.html">Inicio</a></li>
-        <li class="current">San Martín Suites</li>
-      </ol>
-    </nav>
-  </div>
-</div><!-- End Page Title -->
+    <div class="page-title accent-background">
+      <div class="container position-relative">
+        <h1 data-i18n="proyectoTituloSanMartin">San Martín Suites – Bariloche</h1>
+        <p data-i18n="proyectoDescripcionSanMartin">Departamentos de diseño contemporáneo en pleno centro de Bariloche. <br> Confort, vistas únicas y ubicación estratégica a pasos del lago y la naturaleza.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html" data-i18n="breadcrumbInicio">Inicio</a></li>
+            <li class="current" data-i18n="breadcrumbSanMartin">San Martín Suites</li>
+          </ol>
+        </nav>
+      </div>
+    </div><section id="portfolio-details" class="portfolio-details section">
 
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
+        <div class="row gy-4 mb-4">
 
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
 
-<!--* Portfolio Details Section -->
-<section id="portfolio-details" class="portfolio-details section">
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin.webp" alt="San Martin Suites"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin2.webp" alt="San Martin Suites"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin3.webp" alt="San Martin Suites"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin4.webp" alt="San Martin Suites"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin5.webp" alt="San Martin Suites"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin6.webp" alt="San Martin Suites"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin7.webp" alt="San Martin Suites"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin8.webp" alt="San Martin Suites"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin9.webp" alt="San Martin Suites"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin10.webp" alt="San Martin Suites"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin11.webp" alt="San Martin Suites"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin12.webp" alt="San Martin Suites"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin13.webp" alt="San Martin Suites"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin14.webp" alt="San Martin Suites"></div>
+              </div>
 
-    <!--? PRIMERA FILA: Slider + Info -->
-    <div class="row gy-4 mb-4">
-
-      <!-- Columna del slider -->
-      <div class="col-lg-8">
-        <div class="portfolio-details-slider swiper init-swiper">
-
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": { "delay": 5000 },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-
-          <!--* Portfolio Imagenes -->
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin.webp" alt="San Martin Suites"></div>
-            <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin2.webp" alt="San Martin Suites"></div>
-            <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin3.webp" alt="San Martin Suites"></div>
-            <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin4.webp" alt="San Martin Suites"></div>
-            <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin5.webp" alt="San Martin Suites"></div>
-            <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin6.webp" alt="San Martin Suites"></div>
-            <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin7.webp" alt="San Martin Suites"></div>
-            <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin8.webp" alt="San Martin Suites"></div>
-            <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin9.webp" alt="San Martin Suites"></div>
-            <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin10.webp" alt="San Martin Suites"></div>
-            <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin11.webp" alt="San Martin Suites"></div>
-            <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin12.webp" alt="San Martin Suites"></div>
-            <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin13.webp" alt="San Martin Suites"></div>
-            <div class="swiper-slide"><img src="assets/img/portfolio/sanMartin14.webp" alt="San Martin Suites"></div>
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
 
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-
-<!-- Columna info del proyecto -->
-<div class="col-lg-4">
-  <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-    <h3>Sobre el proyecto</h3>
-    <ul>
-      <li><strong>ARQUITECTO</strong>: Enrique Erpen</li>
-      <li><strong>EMPRESA CONSTRUCTORA</strong>: A confirmar</li>
-      <li><strong>AÑO DE MUDANZA</strong>: A confirmar</li>
-      <li><strong>CANTIDAD DE UNIDADES</strong> <br> 12 monoambientes de 36 m² <br> 9  monoambientes de 42 m² <br> 3 monoambientes de 52 m² <br> 3 monoambientes de 56 m² con patio jardín <br> 3 dos ambientes tríplex de 104 m² <br> 6 cocheras <br> 1 local comercial</li>
-    </ul>
-  </div>
-</div>
-
-
-
-    <!--? SEGUNDA FILA: Estado + Descripción -->
-    <div class="row gy-4">
-
-      <!-- Columna estado del proyecto -->
-      <div class="col-lg-4">
-        <div class="portfolio-info" data-aos="fade-up" data-aos-delay="250">
-          <h3>Estado del proyecto</h3>
-          <p class="mb-1">Avance general del desarrollo</p>
-          <div class="progress mb-4">
-            <div class="progress-bar bg-success" style="width: 5%;">5%</div>
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3 data-i18n="proyectoSobre">Sobre el proyecto</h3>
+              <ul>
+                <li><strong data-i18n="proyectoArquitecto">ARQUITECTO</strong>: Enrique Erpen</li>
+                <li><strong data-i18n="proyectoConstructora">EMPRESA CONSTRUCTORA</strong>: <span data-i18n="aConfirmar">A confirmar</span></li>
+                <li><strong data-i18n="proyectoAnio">AÑO DE MUDANZA</strong>: <span data-i18n="aConfirmar">A confirmar</span></li>
+                <li>
+                  <strong data-i18n="proyectoCantidad">CANTIDAD DE UNIDADES</strong>
+                  <br> <span data-i18n="unidades1">12 monoambientes de 36 m²</span>
+                  <br> <span data-i18n="unidades2">9 monoambientes de 42 m²</span>
+                  <br> <span data-i18n="unidades3">3 monoambientes de 52 m²</span>
+                  <br> <span data-i18n="unidades4">3 monoambientes de 56 m² con patio jardín</span>
+                  <br> <span data-i18n="unidades5">3 dos ambientes tríplex de 104 m²</span>
+                  <br> <span data-i18n="unidades6">6 cocheras</span>
+                  <br> <span data-i18n="unidades7">1 local comercial</span>
+                </li>
+              </ul>
+            </div>
           </div>
-          <p class="mb-1">En etapa inicial</p>
-          <p class="mb-1">Etapa preconstructiva iniciada.</p>
-          <p class="mb-1">Demolición edilicia programada para julio 2025.</p>
-          <p class="mb-1">Movimiento de suelo y nivelación del terreno en proceso.</p>
-        </div>
-
-      </div>
-
-<!-- Columna descripción -->
-<div class="col-lg-8">
-  <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-    <h2>San Martín</h2>
-    <p>Desarrollo elegante y moderno en el corazón de Bariloche, que fusiona diseño, naturaleza y comodidad. Ubicado a pasos del microcentro, del bosque y del Lago Nahuel Huapi, combina practicidad con un entorno privilegiado.</p>
-
-    <p>El edificio ofrece una variada tipología de unidades: monoambientes de 36 a 56 m² —algunos con patio jardín—, triplex de dos ambientes con terraza, cocheras en subsuelo y un local comercial.</p>
-
-    <p>La propuesta arquitectónica integra materiales nobles como piedra, granito y madera, con tecnología para el confort: iluminación de espacios comunes mediante paneles solares y domótica para automatizar seguridad, cortinas, iluminación, sonido, TV y calefacción.</p>
-
-    <p>Con aislación térmica y acústica, carpintería de PVC símil madera con vidrios dobles, calefacción central, aire acondicionado y ascensor de primera marca, San Martín ofrece calidad en cada detalle.</p>
-  </div>
-</div>
 
 
 
-    <!--* MÁS DETALLES + MAPA -->
-<div class="portfolio-details">
-<div class="row gy-4 mt-2">
+          <div class="row gy-4">
 
-<!--? Columna de detalles -->
-<div class="col-lg-6 portfolio-description" data-aos="fade-up" data-aos-delay="300">
+            <div class="col-lg-4">
+              <div class="portfolio-info" data-aos="fade-up" data-aos-delay="250">
+                <h3 data-i18n="estadoTitulo">Estado del proyecto</h3>
+                <p class="mb-1" data-i18n="estadoSubtitulo">Avance general del desarrollo</p>
+                <div class="progress mb-4">
+                  <div class="progress-bar bg-success" style="width: 5%;">5%</div>
+                </div>
+                <p class="mb-1" data-i18n="estadoLinea1">En etapa inicial</p>
+                <p class="mb-1" data-i18n="estadoLinea2">Etapa preconstructiva iniciada.</p>
+                <p class="mb-1" data-i18n="estadoLinea3">Demolición edilicia programada para julio 2025.</p>
+                <p class="mb-1" data-i18n="estadoLinea4">Movimiento de suelo y nivelación del terreno en proceso.</p>
+              </div>
 
-  <h2>Diseño arquitectónico</h2>
-  <p>San Martín combina arquitectura moderna con materiales nobles como piedra, granito y madera, logrando un estilo atemporal que dialoga con el entorno patagónico.</p>
-  <p>El proyecto prioriza el confort y la eficiencia, integrando tecnología domótica y sistemas de iluminación de espacios comunes mediante paneles solares.</p>
+            </div>
 
-  <h2 class="mt-4">Un entorno privilegiado</h2>
-  <p>Ubicado sobre Av. San Martín, en pleno centro de Bariloche, ofrece acceso inmediato a comercios, gastronomía y recreación, junto con vistas al Lago Nahuel Huapi y a los cerros Otto y Runge.</p>
-  <p>Su ubicación y prestaciones lo convierten en una inversión estratégica, ideal para uso residencial o alquiler turístico con alto potencial de valorización.</p>
+            <div class="col-lg-8">
+              <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+                <h2 data-i18n="descTituloSanMartin">San Martín</h2>
+                <p data-i18n="descP1">Desarrollo elegante y moderno en el corazón de Bariloche, que fusiona diseño, naturaleza y comodidad. Ubicado a pasos del microcentro, del bosque y del Lago Nahuel Huapi, combina practicidad con un entorno privilegiado.</p>
+                <p data-i18n="descP2">El edificio ofrece una variada tipología de unidades: monoambientes de 36 a 56 m² —algunos con patio jardín—, triplex de dos ambientes con terraza, cocheras en subsuelo y un local comercial.</p>
+                <p data-i18n="descP3">La propuesta arquitectónica integra materiales nobles como piedra, granito y madera, con tecnología para el confort: iluminación de espacios comunes mediante paneles solares y domótica para automatizar seguridad, cortinas, iluminación, sonido, TV y calefacción.</p>
+                <p data-i18n="descP4">Con aislación térmica y acústica, carpintería de PVC símil madera con vidrios dobles, calefacción central, aire acondicionado y ascensor de primera marca, San Martín ofrece calidad en cada detalle.</p>
+              </div>
+            </div>
 
-</div>
+
+
+            <div class="portfolio-details">
+              <div class="row gy-4 mt-2">
+
+                <div class="col-lg-6 portfolio-description" data-aos="fade-up" data-aos-delay="300">
+
+                  <h2 data-i18n="disenoTitulo">Diseño arquitectónico</h2>
+                  <p data-i18n="disenoP1">San Martín combina arquitectura moderna con materiales nobles como piedra, granito y madera, logrando un estilo atemporal que dialoga con el entorno patagónico.</p>
+                  <p data-i18n="disenoP2">El proyecto prioriza el confort y la eficiencia, integrando tecnología domótica y sistemas de iluminación de espacios comunes mediante paneles solares.</p>
+
+                  <h2 class="mt-4" data-i18n="entornoTitulo">Un entorno privilegiado</h2>
+                  <p data-i18n="entornoP1">Ubicado sobre Av. San Martín, en pleno centro de Bariloche, ofrece acceso inmediato a comercios, gastronomía y recreación, junto con vistas al Lago Nahuel Huapi y a los cerros Otto y Runge.</p>
+                  <p data-i18n="entornoP2">Su ubicación y prestaciones lo convierten en una inversión estratégica, ideal para uso residencial o alquiler turístico con alto potencial de valorización.</p>
+
+                </div>
 
 
 
-  <!--? Columna del mapa -->
-  <div class="col-lg-6">
-    <div class="map-responsive">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3005.0362324169014!2d-71.31546500000002!3d-41.133735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDA4JzAxLjUiUyA3McKwMTgnNTUuNyJX!5e0!3m2!1ses-419!2sar!4v1757884807168!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
+                <div class="col-lg-6">
+                  <div class="map-responsive">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3005.0362324169014!2d-71.31546500000002!3d-41.133735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDA4JzAxLjUiUyA3McKwMTgnNTUuNyJX!5e0!3m2!1ses-419!2sar!4v1757884807168!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                </div>
 
-</div>
-</div>
+              </div>
+            </div>
 
-  </div>
+          </div>
 
-</section><!--* End Portfolio Details Section -->
+    </section><footer id="footer" class="footer dark-background">
 
-<!--* VIDEO DE AVANCE DE OBRA -->
-<section id="video-obra" class="section">
-  <div class="container" data-aos="fade-up">
-    <div class="section-title">
-      <h2 data-i18n="videoTitulo">Avance de Obra</h2>
-      <p data-i18n="videoDescripcion">
-        Compartimos un resumen en video del progreso de la construcción para que sigas de cerca cada etapa del proyecto.
-      </p>
-    </div>
-    <div class="video-container text-center">
-      <video controls width="80%" poster="assets/img/portfolio/seresLogo.webp">
-        <source src="assets/img/portfolio/dronArelauquen.mp4" type="video/mp4">
-        Tu navegador no soporta la reproducción de video.
-      </video>
-    </div>
-  </div>
-</section>
+      <div class="container footer-top">
+        <div class="row gy-4">
 
-<footer id="footer" class="footer dark-background">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Seres Desarrollos</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>Paraguay 4747</p>
+              <p data-i18n="footerCiudad">Ciudad de Buenos Aires, Argentina.</p>
+              <p class="mt-3"><strong data-i18n="footerTelefono">Teléfono:</strong> <span>+54 9 2945 90-7239</span></p>
+              <p><strong data-i18n="footerEmail">Email:</strong> <span>seres.desarrollosbrc@gmail.com </span></p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <a href="https://www.instagram.com/seresdesarrollos_/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
 
-  <div class="container footer-top">
-    <div class="row gy-4">
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4 data-i18n="footerConocenos">Conocenos</h4>
+            <ul>
+              <li><a href="index.html" data-i18n="navbarInicio">Inicio</a></li>
+              <li><a href="index.html#about" data-i18n="navbarNosotros">Nosotros</a></li>
+              <li><a href="index.html#portfolio" data-i18n="navbarproyectos">Proyectos</a></li>
+              <li><a href="index.html#contact" data-i18n="navbarcontacto">Contacto</a></li>
+            </ul>
+          </div>
 
-      <!-- Info Empresa -->
-      <div class="col-lg-4 col-md-6 footer-about">
-        <a href="index.html" class="logo d-flex align-items-center">
-          <span class="sitename">Seres Desarrollos</span>
-        </a>
-        <div class="footer-contact pt-3">
-          <p>Paraguay 4747</p>
-          <p data-i18n="footerCiudad">Ciudad de Buenos Aires, Argentina.</p>
-          <p class="mt-3"><strong data-i18n="footerTelefono">Teléfono:</strong> <span>+54 9 2945 90-7239</span></p>
-          <p><strong data-i18n="footerEmail">Email:</strong> <span>seres.desarrollosbrc@gmail.com </span></p>
-        </div>
-        <div class="social-links d-flex mt-4">
-          <a href="https://www.instagram.com/seresdesarrollos_/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
         </div>
       </div>
 
-      <!-- Links -->
-      <div class="col-lg-2 col-md-3 footer-links">
-        <h4 data-i18n="footerConocenos">Conocenos</h4>
-        <ul>
-          <li><a href="index.html" data-i18n="navbarInicio">Inicio</a></li>
-          <li><a href="index.html#about" data-i18n="navbarNosotros">Nosotros</a></li>
-          <li><a href="index.html#portfolio" data-i18n="navbarproyectos">Proyectos</a></li>
-          <li><a href="index.html#contact" data-i18n="navbarcontacto">Contacto</a></li>
-        </ul>
+      <div class="container copyright text-center mt-4">
+        <p><span data-i18n="footerDesarrollado">Desarrollado por</span>
+          <strong class="px-1 sitename">FoxyDev - Soluciones Software</strong>
+        </p>
+        <div class="credits">
+          <span data-i18n="footerConoceTrabajos">conoce mis trabajos</span>
+          <a href="https://github.com/FoxyDevSolution" target="_blank"> <span data-i18n="footerEnPorfolio">En mi porfolio</span></a>
+        </div>
       </div>
 
-    </div>
-  </div>
-
-  <!-- Créditos -->
-  <div class="container copyright text-center mt-4">
-    <p><span data-i18n="footerDesarrollado">Desarrollado por</span> 
-      <strong class="px-1 sitename">FoxyDev - Soluciones Software</strong>
-    </p>
-    <div class="credits">
-      <span data-i18n="footerConoceTrabajos">conoce mis trabajos</span> 
-      <a href="https://github.com/FoxyDevSolution" target="_blank"> <span data-i18n="footerEnPorfolio">En mi porfolio</span></a>
-    </div>
-  </div>
-
-</footer>
+    </footer>
 
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-<!-- Botón flotante WhatsApp -->
-<a href="https://wa.me/542945907239" class="whatsapp-float align-items-center justify-content-center" target="_blank" aria-label="Whatsapp">
-  <i class="bi bi-whatsapp"></i>
-</a>
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="https://wa.me/542945907239" class="whatsapp-float align-items-center justify-content-center" target="_blank" aria-label="Whatsapp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+    <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 
+    <script>
+      const resources = {
+        es: {
+          translation: {
+            navbarInicio: "Inicio",
+            navbarNosotros: "Nosotros",
+            navbarproyectos: "Proyectos",
+            navbarConoceMas: "Conoce más",
+            navbarcontacto: "Contacto",
+            navbarIdioma: "Idioma",
+
+            // --- San Martin Project ---
+            proyectoTituloSanMartin: "San Martín Suites – Bariloche",
+            proyectoDescripcionSanMartin: "Departamentos de diseño contemporáneo en pleno centro de Bariloche. Confort, vistas únicas y ubicación estratégica a pasos del lago y la naturaleza.",
+            breadcrumbInicio: "Inicio",
+            breadcrumbSanMartin: "San Martín Suites",
+            proyectoSobre: "Sobre el proyecto",
+            proyectoArquitecto: "ARQUITECTO",
+            aConfirmar: "A confirmar",
+            proyectoConstructora: "EMPRESA CONSTRUCTORA",
+            proyectoAnio: "AÑO DE MUDANZA",
+            proyectoCantidad: "CANTIDAD DE UNIDADES",
+            unidades1: "12 monoambientes de 36 m²",
+            unidades2: "9 monoambientes de 42 m²",
+            unidades3: "3 monoambientes de 52 m²",
+            unidades4: "3 monoambientes de 56 m² con patio jardín",
+            unidades5: "3 dos ambientes tríplex de 104 m²",
+            unidades6: "6 cocheras",
+            unidades7: "1 local comercial",
+
+            estadoTitulo: "Estado del proyecto",
+            estadoSubtitulo: "Avance general del desarrollo",
+            estadoLinea1: "En etapa inicial",
+            estadoLinea2: "Etapa preconstructiva iniciada.",
+            estadoLinea3: "Demolición edilicia programada para julio 2025.",
+            estadoLinea4: "Movimiento de suelo y nivelación del terreno en proceso.",
+
+            descTituloSanMartin: "San Martín",
+            descP1: "Desarrollo elegante y moderno en el corazón de Bariloche, que fusiona diseño, naturaleza y comodidad. Ubicado a pasos del microcentro, del bosque y del Lago Nahuel Huapi, combina practicidad con un entorno privilegiado.",
+            descP2: "El edificio ofrece una variada tipología de unidades: monoambientes de 36 a 56 m² —algunos con patio jardín—, triplex de dos ambientes con terraza, cocheras en subsuelo y un local comercial.",
+            descP3: "La propuesta arquitectónica integra materiales nobles como piedra, granito y madera, con tecnología para el confort: iluminación de espacios comunes mediante paneles solares y domótica para automatizar seguridad, cortinas, iluminación, sonido, TV y calefacción.",
+            descP4: "Con aislación térmica y acústica, carpintería de PVC símil madera con vidrios dobles, calefacción central, aire acondicionado y ascensor de primera marca, San Martín ofrece calidad en cada detalle.",
+
+            disenoTitulo: "Diseño arquitectónico",
+            disenoP1: "San Martín combina arquitectura moderna con materiales nobles como piedra, granito y madera, logrando un estilo atemporal que dialoga con el entorno patagónico.",
+            disenoP2: "El proyecto prioriza el confort y la eficiencia, integrando tecnología domótica y sistemas de iluminación de espacios comunes mediante paneles solares.",
+            
+            entornoTitulo: "Un entorno privilegiado",
+            entornoP1: "Ubicado sobre Av. San Martín, en pleno centro de Bariloche, ofrece acceso inmediato a comercios, gastronomía y recreación, junto con vistas al Lago Nahuel Huapi y a los cerros Otto y Runge.",
+            entornoP2: "Su ubicación y prestaciones lo convierten en una inversión estratégica, ideal para uso residencial o alquiler turístico con alto potencial de valorización.",
+
+            footerCiudad: "Ciudad de Buenos Aires, Argentina.",
+            footerTelefono: "Teléfono:",
+            footerEmail: "Email:",
+            footerConocenos: "Conocenos",
+            footerDesarrollado: "Desarrollado por",
+            footerConoceTrabajos: "conoce mis trabajos",
+            footerEnPorfolio: "En mi porfolio"
+          }
+        },
+        en: {
+          translation: {
+            navbarInicio: "Home",
+            navbarNosotros: "About Us",
+            navbarproyectos: "Projects",
+            navbarConoceMas: "Learn more",
+            navbarcontacto: "Contact",
+            navbarIdioma: "Language",
+
+            // --- San Martin Project ---
+            proyectoTituloSanMartin: "San Martín Suites – Bariloche",
+            proyectoDescripcionSanMartin: "Contemporary design apartments in the heart of Bariloche. Comfort, unique views, and a strategic location just steps from the lake and nature.",
+            breadcrumbInicio: "Home",
+            breadcrumbSanMartin: "San Martín Suites",
+            proyectoSobre: "About the project",
+            proyectoArquitecto: "ARCHITECT",
+            aConfirmar: "To be confirmed",
+            proyectoConstructora: "CONSTRUCTION COMPANY",
+            proyectoAnio: "MOVE-IN YEAR",
+            proyectoCantidad: "NUMBER OF UNITS",
+            unidades1: "12 studio apartments of 36 m²",
+            unidades2: "9 studio apartments of 42 m²",
+            unidades3: "3 studio apartments of 52 m²",
+            unidades4: "3 studio apartments of 56 m² with garden patio",
+            unidades5: "3 two-room triplex apartments of 104 m²",
+            unidades6: "6 parking spaces",
+            unidades7: "1 commercial space",
+
+            estadoTitulo: "Project status",
+            estadoSubtitulo: "General development progress",
+            estadoLinea1: "In initial stage",
+            estadoLinea2: "Pre-construction phase has begun.",
+            estadoLinea3: "Building demolition scheduled for July 2025.",
+            estadoLinea4: "Earthworks and ground leveling in progress.",
+
+            descTituloSanMartin: "San Martín",
+            descP1: "An elegant and modern development in the heart of Bariloche, blending design, nature, and comfort. Located steps from the city center, the forest, and Nahuel Huapi Lake, it combines practicality with a privileged environment.",
+            descP2: "The building offers a variety of unit types: studio apartments from 36 to 56 m² —some with a garden patio—, two-room triplex apartments with a terrace, basement parking, and a commercial space.",
+            descP3: "The architectural proposal integrates noble materials like stone, granite, and wood, with technology for comfort: solar panels for common area lighting and home automation to control security, blinds, lighting, sound, TV, and heating.",
+            descP4: "With thermal and acoustic insulation, wood-look PVC joinery with double glazing, central heating, air conditioning, and a top-brand elevator, San Martín offers quality in every detail.",
+            
+            disenoTitulo: "Architectural design",
+            disenoP1: "San Martín combines modern architecture with noble materials such as stone, granite, and wood, achieving a timeless style that dialogues with the Patagonian surroundings.",
+            disenoP2: "The project prioritizes comfort and efficiency, integrating home automation technology and solar panel systems for common area lighting.",
+            
+            entornoTitulo: "A privileged environment",
+            entornoP1: "Located on Av. San Martín, right in the center of Bariloche, it offers immediate access to shops, restaurants, and recreation, along with views of Nahuel Huapi Lake and the Otto and Runge hills.",
+            entornoP2: "Its location and amenities make it a strategic investment, ideal for residential use or tourist rental with high appreciation potential.",
+
+            footerCiudad: "Buenos Aires City, Argentina.",
+            footerTelefono: "Phone:",
+            footerEmail: "Email:",
+            footerConocenos: "Get to know us",
+            footerDesarrollado: "Developed by",
+            footerConoceTrabajos: "see my work",
+            footerEnPorfolio: "In my portfolio"
+          }
+        },
+        pt: {
+          translation: {
+            navbarInicio: "Início",
+            navbarNosotros: "Sobre nós",
+            navbarproyectos: "Projetos",
+            navbarConoceMas: "Saiba mais",
+            navbarcontacto: "Contato",
+            navbarIdioma: "Idioma",
+
+            // --- Projeto San Martin ---
+            proyectoTituloSanMartin: "San Martín Suites – Bariloche",
+            proyectoDescripcionSanMartin: "Apartamentos com design contemporâneo no coração de Bariloche. Conforto, vistas únicas e localização estratégica a poucos passos do lago e da natureza.",
+            breadcrumbInicio: "Início",
+            breadcrumbSanMartin: "San Martín Suites",
+            proyectoSobre: "Sobre o projeto",
+            proyectoArquitecto: "ARQUITETO",
+            aConfirmar: "A confirmar",
+            proyectoConstructora: "EMPRESA CONSTRUTORA",
+            proyectoAnio: "ANO DE MUDANÇA",
+            proyectoCantidad: "QUANTIDADE DE UNIDADES",
+            unidades1: "12 estúdios de 36 m²",
+            unidades2: "9 estúdios de 42 m²",
+            unidades3: "3 estúdios de 52 m²",
+            unidades4: "3 estúdios de 56 m² com pátio-jardim",
+            unidades5: "3 duplex de dois quartos de 104 m²",
+            unidades6: "6 vagas de estacionamento",
+            unidades7: "1 espaço comercial",
+
+            estadoTitulo: "Estado do projeto",
+            estadoSubtitulo: "Progresso geral do empreendimento",
+            estadoLinea1: "Em fase inicial",
+            estadoLinea2: "Fase de pré-construção iniciada.",
+            estadoLinea3: "Demolição do edifício programada para julho de 2025.",
+            estadoLinea4: "Movimentação de terra e nivelamento do terreno em andamento.",
+
+            descTituloSanMartin: "San Martín",
+            descP1: "Um empreendimento elegante e moderno no coração de Bariloche, que une design, natureza e conforto. Localizado a poucos passos do centro, da floresta e do Lago Nahuel Huapi, ele combina praticidade com um ambiente privilegiado.",
+            descP2: "O edifício oferece uma variedade de tipologias de unidades: estúdios de 36 a 56 m² —alguns com pátio-jardim—, triplex de dois quartos com terraço, vagas de estacionamento no subsolo e um espaço comercial.",
+            descP3: "A proposta arquitetônica integra materiais nobres como pedra, granito e madeira, com tecnologia para o conforto: iluminação de áreas comuns por painéis solares e automação residencial para controlar segurança, persianas, iluminação, som, TV e aquecimento.",
+            descP4: "Com isolamento térmico e acústico, esquadrias de PVC com aparência de madeira e vidros duplos, aquecimento central, ar-condicionado e elevador de primeira linha, San Martín oferece qualidade em cada detalhe.",
+
+            disenoTitulo: "Design arquitetônico",
+            disenoP1: "San Martín combina arquitetura moderna com materiais nobres como pedra, granito e madeira, criando um estilo atemporal que dialoga com o entorno patagônico.",
+            disenoP2: "O projeto prioriza o conforto e a eficiência, integrando tecnologia de automação residencial e sistemas de iluminação de áreas comuns por painéis solares.",
+            
+            entornoTitulo: "Um ambiente privilegiado",
+            entornoP1: "Localizado na Av. San Martín, bem no centro de Bariloche, oferece acesso imediato a lojas, restaurantes e lazer, além de vistas para o Lago Nahuel Huapi e os cerros Otto e Runge.",
+            entornoP2: "Sua localização e comodidades o tornam um investimento estratégico, ideal para uso residencial ou aluguel turístico com alto potencial de valorização.",
+
+            footerCiudad: "Cidade de Buenos Aires, Argentina.",
+            footerTelefono: "Telefone:",
+            footerEmail: "Email:",
+            footerConocenos: "Conheça-nos",
+            footerDesarrollado: "Desenvolvido por",
+            footerConoceTrabajos: "veja meus trabalhos",
+            footerEnPorfolio: "No meu portfólio"
+          }
+        },
+      };
+
+      i18next.init({
+        lng: 'es', // Imposta la lingua di default
+        debug: true,
+        resources: resources
+      }, function(err, t) {
+        if (err) return console.log('something went wrong loading', err);
+        updateContent();
+      });
+
+      function setLanguage(lang) {
+        i18next.changeLanguage(lang, (err, t) => {
+          if (err) return console.log('something went wrong changing language', err);
+          updateContent();
+        });
+      }
+
+      function updateContent() {
+        document.querySelectorAll('[data-i18n]').forEach(function(element) {
+          const key = element.getAttribute('data-i18n');
+          element.textContent = i18next.t(key);
+        });
+        document.documentElement.lang = i18next.language;
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        updateContent();
+      });
+    </script>
 </body>
 
 </html>

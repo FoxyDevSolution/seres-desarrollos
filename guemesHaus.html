@@ -29,6 +29,8 @@
 
     <script src="https://unpkg.com/i18next@22.5.1/dist/umd/i18next.min.js"></script>
 
+    
+
 </head>
 
 <body class="portfolio-details-page">
@@ -255,6 +257,7 @@
 </section><!--* End Portfolio Details Section -->
 
 <!--* VIDEO DE AVANCE DE OBRA -->
+<!--
 <section id="video-obra" class="section">
   <div class="container" data-aos="fade-up">
     <div class="section-title">
@@ -264,13 +267,61 @@
       </p>
     </div>
     <div class="video-container text-center">
-      <video controls width="80%" poster="assets/img/portfolio/seresLogo.webp">
-        <source src="assets/img/portfolio/dronArelauquen.mp4" type="video/mp4">
+      <video controls poster="assets/img/portfolio/seresLogo.webp">
+        <source src="assets/img/portfolio/guemesvideo.mp4" type="video/mp4">
         Tu navegador no soporta la reproducción de video.
       </video>
     </div>
   </div>
 </section>
+--* End Video de Avance de Obra Section -->
+
+<!--* VIDEO DE AVANCE DE OBRA bootstrap -->
+
+<section id="video-obra" class="section">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2 data-i18n="videoTitulo">Avance de Obra</h2>
+      <p data-i18n="videoDescripcion">
+        Compartimos un resumen en video del progreso de la construcción para que sigas de cerca cada etapa del proyecto.
+      </p>
+    </div>
+
+    <!-- Desktop: video inline -->
+    <div class="video-container text-center d-none d-lg-block">
+      <video controls poster="assets/img/portfolio/seresLogo.webp">
+        <source src="assets/img/portfolio/guemesvideo.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+      </video>
+    </div>
+
+    <!-- Mobile: botón que abre modal -->
+    <div class="text-center d-block d-lg-none">
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal">
+        Ver video
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Modal (solo mobile) -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+    <div class="modal-content bg-dark">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body text-center">
+        <video controls autoplay class="w-100" style="max-height: 600px;" poster="assets/img/portfolio/seresLogo.webp">
+          <source src="assets/img/portfolio/guemesvideo.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de video.
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
 <footer id="footer" class="footer dark-background">
@@ -529,6 +580,15 @@ const resources = {
   }
 </script>
 
+<script>
+  const videoModal = document.getElementById('videoModal');
+  const mobileVideo = videoModal.querySelector('video');
+
+  videoModal.addEventListener('hidden.bs.modal', function () {
+    mobileVideo.pause();        // Pausa el video
+    mobileVideo.currentTime = 0; // Opcional: vuelve al inicio
+  });
+</script>
 
 
 
