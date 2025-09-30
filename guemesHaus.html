@@ -312,7 +312,7 @@
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
       <div class="modal-body text-center">
-        <video controls autoplay class="w-100" style="max-height: 600px;" poster="assets/img/portfolio/seresLogo.webp">
+        <video controls class="w-100" style="max-height: 600px;" poster="assets/img/portfolio/seresLogo.webp" id="modalVideo" muted>
           <source src="assets/img/portfolio/guemesvideo.mp4" type="video/mp4">
           Tu navegador no soporta la reproducción de video.
         </video>
@@ -582,11 +582,25 @@ const resources = {
 
 <script>
   const videoModal = document.getElementById('videoModal');
-  const mobileVideo = videoModal.querySelector('video');
+  const modalVideo = document.getElementById('modalVideo'); 
 
+  // Evento que se dispara justo cuando el modal se abre (el usuario hizo clic)
+  videoModal.addEventListener('shown.bs.modal', function () {
+    modalVideo.muted = false; 
+    
+    // 2. Iniciamos la reproducción
+    modalVideo.play().catch(error => {
+        console.error("Fallo al reproducir con sonido. El video puede iniciar silenciado.", error);
+        modalVideo.muted = true; 
+        modalVideo.play();
+    });
+  });
+
+  // Evento que se dispara cuando el modal se cierra
   videoModal.addEventListener('hidden.bs.modal', function () {
-    mobileVideo.pause();        // Pausa el video
-    mobileVideo.currentTime = 0; // Opcional: vuelve al inicio
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
+    modalVideo.muted = true; 
   });
 </script>
 
